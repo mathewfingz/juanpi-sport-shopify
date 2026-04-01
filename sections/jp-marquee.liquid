@@ -1,0 +1,51 @@
+<div class="jp-home">
+<div class="categories">
+  <div class="categories-inner">
+    {%- for block in section.blocks -%}
+      <span class="cat-item" {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="cat-item">{{ block.settings.text }}</span>
+    {%- endfor -%}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "JP - Marquee Categorias",
+  "tag": "section",
+  "class": "jp-marquee-section",
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Categoria",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texto",
+          "default": "Categoria"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "JP - Marquee Categorias",
+      "blocks": [
+        { "type": "category", "settings": { "text": "Crop Tops" } },
+        { "type": "category", "settings": { "text": "Enterizos" } },
+        { "type": "category", "settings": { "text": "Sets Deportivos" } },
+        { "type": "category", "settings": { "text": "Faldas" } },
+        { "type": "category", "settings": { "text": "Licras" } },
+        { "type": "category", "settings": { "text": "Chaquetas" } },
+        { "type": "category", "settings": { "text": "Shorts" } },
+        { "type": "category", "settings": { "text": "Vestidos" } },
+        { "type": "category", "settings": { "text": "Joggers" } },
+        { "type": "category", "settings": { "text": "Pantalones" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

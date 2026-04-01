@@ -1,0 +1,95 @@
+<div class="jp-home">
+<section class="section bnpl">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ section.settings.heading }}</h2>
+      <p class="section-subtitle">{{ section.settings.subtitle }}</p>
+    </div>
+    <div class="bnpl-icons">
+      {%- for block in section.blocks -%}
+        <div class="bnpl-item" {{ block.shopify_attributes }}>
+          <div class="bnpl-icon">
+            {%- case block.settings.icon -%}
+              {%- when 'card' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              {%- when 'money' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              {%- when 'package' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              {%- when 'mail' -%}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            {%- endcase -%}
+          </div>
+          <strong>{{ block.settings.title }}</strong>
+          <p>{{ block.settings.description }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "JP - Beneficios Pago",
+  "tag": "section",
+  "class": "jp-bnpl-section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "COMPRA AHORA, <span class=\"highlight\">PAGA DESPUES</span>"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitulo",
+      "default": "Opciones de pago flexibles para que entrenes sin preocupaciones."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Beneficio",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icono",
+          "options": [
+            { "value": "card", "label": "Tarjeta" },
+            { "value": "money", "label": "Dinero/Cuotas" },
+            { "value": "package", "label": "Paquete/Envio" },
+            { "value": "mail", "label": "Correo/Soporte" }
+          ],
+          "default": "card"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo",
+          "default": "Beneficio"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Descripcion",
+          "default": "Descripcion del beneficio"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "JP - Beneficios Pago",
+      "blocks": [
+        { "type": "benefit", "settings": { "icon": "card", "title": "Tarjetas", "description": "Credito y debito sin recargo" } },
+        { "type": "benefit", "settings": { "icon": "money", "title": "Cuotas", "description": "Hasta 12 cuotas sin interes" } },
+        { "type": "benefit", "settings": { "icon": "package", "title": "Envio Seguro", "description": "Empaque protegido a todo el pais" } },
+        { "type": "benefit", "settings": { "icon": "mail", "title": "Soporte", "description": "Atencion personalizada por WhatsApp" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

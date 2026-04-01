@@ -1,0 +1,136 @@
+<div class="jp-home">
+<section class="hero">
+  <div class="hero-bg">
+    {%- if section.settings.bg_image != blank -%}
+      {{ section.settings.bg_image | image_url: width: 1920 | image_tag: alt: section.settings.bg_image.alt, loading: 'eager' }}
+    {%- else -%}
+      <div style="width:100%;height:100%;background:#001E4A;"></div>
+    {%- endif -%}
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">{{ section.settings.tag }}</div>
+      <h1 class="hero-title">
+        {{ section.settings.heading_line1 }}
+        <span class="accent">{{ section.settings.heading_accent }}</span>
+      </h1>
+      <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+      <div class="hero-cta">
+        {%- if section.settings.btn1_label != blank -%}
+          <a href="{{ section.settings.btn1_link }}" class="btn-primary">{{ section.settings.btn1_label }}</a>
+        {%- endif -%}
+        {%- if section.settings.btn2_label != blank -%}
+          <a href="{{ section.settings.btn2_link }}" class="btn-secondary">{{ section.settings.btn2_label }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="hero-images">
+      {%- if section.settings.image_main != blank -%}
+        {{ section.settings.image_main | image_url: width: 800 | image_tag: alt: section.settings.image_main.alt, class: 'hero-img-main' }}
+      {%- endif -%}
+      {%- if section.settings.image_secondary != blank -%}
+        {{ section.settings.image_secondary | image_url: width: 600 | image_tag: alt: section.settings.image_secondary.alt, class: 'hero-img-secondary' }}
+      {%- endif -%}
+      {%- if section.settings.badge_text != blank -%}
+        <div class="hero-float-badge">{{ section.settings.badge_text }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "JP - Hero Banner",
+  "tag": "section",
+  "class": "jp-hero-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Imagenes"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Imagen de fondo"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_main",
+      "label": "Imagen principal (derecha)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_secondary",
+      "label": "Imagen secundaria (derecha)"
+    },
+    {
+      "type": "header",
+      "content": "Texto"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Etiqueta superior",
+      "default": "Nueva Coleccion 2026"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Titulo linea 1",
+      "default": "ENTRENA CON"
+    },
+    {
+      "type": "text",
+      "id": "heading_accent",
+      "label": "Titulo destacado (amarillo)",
+      "default": "ACTITUD"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitulo",
+      "default": "Ropa deportiva femenina de alto rendimiento. Disenada para brindar soporte, comodidad y estilo en cada movimiento."
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Texto del badge flotante",
+      "default": "Tela Nylon Premium"
+    },
+    {
+      "type": "header",
+      "content": "Botones"
+    },
+    {
+      "type": "text",
+      "id": "btn1_label",
+      "label": "Boton 1 texto",
+      "default": "Ver Coleccion"
+    },
+    {
+      "type": "url",
+      "id": "btn1_link",
+      "label": "Boton 1 enlace"
+    },
+    {
+      "type": "text",
+      "id": "btn2_label",
+      "label": "Boton 2 texto",
+      "default": "Ofertas Especiales"
+    },
+    {
+      "type": "url",
+      "id": "btn2_link",
+      "label": "Boton 2 enlace"
+    }
+  ],
+  "presets": [
+    {
+      "name": "JP - Hero Banner"
+    }
+  ]
+}
+{% endschema %}

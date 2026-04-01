@@ -1,0 +1,74 @@
+<div class="jp-home">
+<section class="split-banner" id="collections">
+  <div class="split-left">
+    <div class="split-left-content">
+      <p class="section-tag">{{ section.settings.tag }}</p>
+      <h2 class="section-title">{%- if section.settings.heading != blank -%}{{ section.settings.heading }}{%- endif -%}</h2>
+      <p class="section-subtitle">{{ section.settings.subtitle }}</p>
+      {%- if section.settings.btn_label != blank -%}
+        <a href="{{ section.settings.btn_link }}" class="btn-primary">{{ section.settings.btn_label }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="split-right">
+    {%- if section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 1200 | image_tag: alt: section.settings.image.alt }}
+    {%- else -%}
+      <div style="width:100%;height:100%;min-height:400px;background:#F0EDED;display:flex;align-items:center;justify-content:center;color:#969696;font-size:1.2rem;">Agrega una imagen</div>
+    {%- endif -%}
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "JP - Split Banner",
+  "tag": "section",
+  "class": "jp-split-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen (lado derecho)"
+    },
+    {
+      "type": "header",
+      "content": "Texto"
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Etiqueta",
+      "default": "Coleccion Mujer"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Titulo (acepta HTML)",
+      "default": "CONQUISTA<br>CON <span style=\"color:#FFD600\">DISCIPLINA</span>"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitulo",
+      "default": "Descubre nuestra linea completa de activewear disenada para mujeres que entrenan con proposito."
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Texto del boton",
+      "default": "Ver Todo"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Enlace del boton"
+    }
+  ],
+  "presets": [
+    {
+      "name": "JP - Split Banner"
+    }
+  ]
+}
+{% endschema %}

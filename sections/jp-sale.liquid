@@ -1,0 +1,92 @@
+<div class="jp-home">
+<section class="section sale-section" id="sale">
+  <div class="container">
+    <div class="sale-inner">
+      <p class="section-tag">{{ section.settings.tag }}</p>
+      <h2 class="section-title">{%- if section.settings.heading != blank -%}{{ section.settings.heading }}{%- endif -%}</h2>
+      <div class="sale-percent">{{ section.settings.percent }}<span>% OFF</span></div>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item"><span class="num" id="jp-days">00</span><span class="label">Dias</span></div>
+        <div class="countdown-item"><span class="num" id="jp-hours">00</span><span class="label">Horas</span></div>
+        <div class="countdown-item"><span class="num" id="jp-minutes">00</span><span class="label">Min</span></div>
+        <div class="countdown-item"><span class="num" id="jp-seconds">00</span><span class="label">Seg</span></div>
+      </div>
+      {%- if section.settings.btn_label != blank -%}
+        <a href="{{ section.settings.btn_link }}" class="btn-primary" style="display:inline-block;">{{ section.settings.btn_label }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+</div>
+
+<script>
+(function(){
+  var endDate = '{{ section.settings.end_date }}';
+  function updateCountdown(){
+    var end = new Date(endDate).getTime();
+    var now = Date.now();
+    var diff = end - now;
+    if(diff <= 0) return;
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var de = document.getElementById('jp-days'); if(de) de.textContent = String(d).padStart(2,'0');
+    var he = document.getElementById('jp-hours'); if(he) he.textContent = String(h).padStart(2,'0');
+    var me = document.getElementById('jp-minutes'); if(me) me.textContent = String(m).padStart(2,'0');
+    var se = document.getElementById('jp-seconds'); if(se) se.textContent = String(s).padStart(2,'0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
+</script>
+
+{% schema %}
+{
+  "name": "JP - Oferta Countdown",
+  "tag": "section",
+  "class": "jp-sale-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Etiqueta",
+      "default": "Oferta Especial"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "REBAJAS DE <span style=\"color:#FFD600\">TEMPORADA</span>"
+    },
+    {
+      "type": "text",
+      "id": "percent",
+      "label": "Porcentaje descuento",
+      "default": "70"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "Fecha fin (formato: December 31, 2026 18:00:00)",
+      "default": "December 31, 2026 18:00:00"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Texto del boton",
+      "default": "Comprar Ahora"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Enlace del boton"
+    }
+  ],
+  "presets": [
+    {
+      "name": "JP - Oferta Countdown"
+    }
+  ]
+}
+{% endschema %}

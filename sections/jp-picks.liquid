@@ -1,0 +1,90 @@
+<div class="jp-home">
+<section class="section" id="picks">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">{{ section.settings.tag }}</p>
+      <h2 class="section-title">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="picks-grid">
+      {%- for block in section.blocks -%}
+        <div class="pick-card" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 900 | image_tag: alt: block.settings.title }}
+          {%- else -%}
+            <div style="width:100%;height:100%;min-height:270px;background:#F0EDED;display:flex;align-items:center;justify-content:center;color:#969696;">Agrega imagen</div>
+          {%- endif -%}
+          <div class="pick-overlay">
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.description }}</p>
+            <span class="pick-price">{{ block.settings.price }}</span>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+</div>
+
+{% schema %}
+{
+  "name": "JP - Favoritos Editor",
+  "tag": "section",
+  "class": "jp-picks-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Etiqueta",
+      "default": "Seleccion Especial"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Titulo",
+      "default": "FAVORITOS DEL <span class=\"highlight\">EDITOR</span>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pick",
+      "name": "Producto destacado",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo",
+          "default": "Producto"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Descripcion",
+          "default": "Descripcion del producto"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Precio",
+          "default": "Desde $100.000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "JP - Favoritos Editor",
+      "blocks": [
+        { "type": "pick", "settings": { "title": "Enterizo Deportivo", "description": "Tela nylon \u2022 Copas \u2022 Push up", "price": "Desde $115.000" } },
+        { "type": "pick", "settings": { "title": "Vestido Deportivo", "description": "Estilo y movimiento", "price": "Desde $85.000" } },
+        { "type": "pick", "settings": { "title": "Conjunto Algodon", "description": "Comodidad total", "price": "Desde $125.000" } },
+        { "type": "pick", "settings": { "title": "Conjunto Deportivo", "description": "Crop top + Short \u2022 Multiples colores", "price": "Desde $95.000" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
