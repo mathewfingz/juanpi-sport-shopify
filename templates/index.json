@@ -1,365 +1,122 @@
 {
   "sections": {
-    "hero_slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_hero_1": {
-          "type": "_slide",
-          "settings": {
-            "slide_background": true,
-            "container": "page-width page-width--full",
-            "height": "full",
-            "media_type_1": "image",
-            "inherit_color_scheme": false,
-            "scheme_background": "#001E4A",
-            "scheme_foreground_heading": "#FFFFFF",
-            "scheme_foreground": "#FFFFFF",
-            "scheme_primary": "#FFD600",
-            "scheme_primary_hover": "#e6c200",
-            "scheme_border": "#001E4A",
-            "scheme_shadow": "#000000"
-          },
-          "blocks": {
-            "hero_tag": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Nueva Colección 2026</p>",
-                "type_preset": "h6",
-                "width": "fit-content",
-                "highlight_text": false
-              }
-            },
-            "hero_heading": {
-              "type": "text",
-              "settings": {
-                "text": "<p>ENTRENA CON <strong>ACTITUD</strong></p>",
-                "type_preset": "h1",
-                "width": "fit-content",
-                "highlight_text": true,
-                "highlight_text_content": "ACTITUD",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#FFD600"
-              }
-            },
-            "hero_subtitle": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Descubre nuestra línea de ropa deportiva femenina diseñada para mujeres que entrenan con pasión y estilo.</p>",
-                "type_preset": "paragraph",
-                "width": "fit-content"
-              }
-            },
-            "hero_btn_primary": {
-              "type": "button",
-              "settings": {
-                "label": "Ver Colección",
-                "link": "/collections/all",
-                "style_class": "button",
-                "button_style": "default"
-              }
-            },
-            "hero_btn_secondary": {
-              "type": "button",
-              "settings": {
-                "label": "Ofertas Especiales",
-                "link": "/collections/ofertas",
-                "style_class": "button-secondary",
-                "button_style": "outline"
-              }
-            }
-          },
-          "block_order": [
-            "hero_tag",
-            "hero_heading",
-            "hero_subtitle",
-            "hero_btn_primary",
-            "hero_btn_secondary"
-          ]
-        }
-      },
-      "block_order": [
-        "slide_hero_1"
-      ],
+    "jp_css_loader": {
+      "type": "custom-liquid",
       "settings": {
-        "slideshow_type": "default",
-        "section_width": "full-width",
-        "slide_height": "large",
-        "autoplay": false,
-        "navigation": "none",
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "custom_liquid": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap\" rel=\"stylesheet\">\n{{ 'juanpi-home.css' | asset_url | stylesheet_tag }}",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "categories_marquee": {
-      "type": "marquee",
-      "blocks": {
-        "marquee_1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Crop Tops</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Enterizos</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_3": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Sets Deportivos</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Faldas</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_5": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Licras</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Chaquetas</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_7": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Shorts</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Vestidos</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Joggers</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "marquee_10": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pantalones</p>",
-            "type_preset": "custom",
-            "font": "var(--font-heading--family)",
-            "font_size": "2.4rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        }
-      },
-      "block_order": [
-        "marquee_1",
-        "marquee_2",
-        "marquee_3",
-        "marquee_4",
-        "marquee_5",
-        "marquee_6",
-        "marquee_7",
-        "marquee_8",
-        "marquee_9",
-        "marquee_10"
-      ],
+    "jp_hero": {
+      "type": "custom-liquid",
       "settings": {
-        "movement_direction": "normal",
-        "gap_between_elements": 40,
-        "color_scheme": "scheme-4",
-        "marquee_type": "auto",
-        "speed": 20,
-        "padding-block-start": 20,
-        "padding-block-end": 20
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"hero\">\n  <div class=\"hero-bg\">\n    {{ 'hero-bg.png' | asset_url | image_tag: alt: 'Juanpi Sport Set Deportivo', class: '' }}\n  </div>\n  <div class=\"hero-overlay\"></div>\n  <div class=\"hero-grid-pattern\"></div>\n  <div class=\"hero-content\">\n    <div class=\"hero-text\">\n      <div class=\"hero-tag\">Nueva Coleccion 2026</div>\n      <h1 class=\"hero-title\">\n        ENTRENA CON\n        <span class=\"accent\">ACTITUD</span>\n      </h1>\n      <p class=\"hero-subtitle\">\n        Ropa deportiva femenina de alto rendimiento. Disenada para brindar soporte, comodidad y estilo en cada movimiento.\n      </p>\n      <div class=\"hero-cta\">\n        <a href=\"/collections/all\" class=\"btn-primary\">Ver Coleccion</a>\n        <a href=\"/collections\" class=\"btn-secondary\">Ofertas Especiales</a>\n      </div>\n    </div>\n    <div class=\"hero-images\">\n      {{ 'hero-img-main.png' | asset_url | image_tag: alt: 'Set deportivo', class: 'hero-img-main' }}\n      {{ 'hero-img-secondary.png' | asset_url | image_tag: alt: 'Conjunto deportivo', class: 'hero-img-secondary' }}\n      <div class=\"hero-float-badge\">Tela Nylon Premium</div>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "new_releases": {
+    "jp_marquee": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"jp-home\">\n<div class=\"categories\">\n  <div class=\"categories-inner\">\n    <span class=\"cat-item\">Crop Tops</span>\n    <span class=\"cat-item\">Enterizos</span>\n    <span class=\"cat-item\">Sets Deportivos</span>\n    <span class=\"cat-item\">Faldas</span>\n    <span class=\"cat-item\">Licras</span>\n    <span class=\"cat-item\">Chaquetas</span>\n    <span class=\"cat-item\">Shorts</span>\n    <span class=\"cat-item\">Vestidos</span>\n    <span class=\"cat-item\">Joggers</span>\n    <span class=\"cat-item\">Pantalones</span>\n    <span class=\"cat-item\">Crop Tops</span>\n    <span class=\"cat-item\">Enterizos</span>\n    <span class=\"cat-item\">Sets Deportivos</span>\n    <span class=\"cat-item\">Faldas</span>\n    <span class=\"cat-item\">Licras</span>\n    <span class=\"cat-item\">Chaquetas</span>\n    <span class=\"cat-item\">Shorts</span>\n    <span class=\"cat-item\">Vestidos</span>\n    <span class=\"cat-item\">Joggers</span>\n    <span class=\"cat-item\">Pantalones</span>\n  </div>\n</div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "jp_releases_header": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section new-releases\" id=\"new-releases\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <p class=\"section-tag\">Lo Ultimo</p>\n      <h2 class=\"section-title\">NUEVOS <span class=\"highlight\">LANZAMIENTOS</span></h2>\n      <p class=\"section-subtitle\">Las ultimas prendas de alto rendimiento para tu entrenamiento.</p>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "jp_releases": {
       "type": "featured-collection",
-      "blocks": {
-        "section-header": {
-          "type": "_section-header",
-          "settings": {
-            "content_direction": "column",
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "gap": 10,
-            "margin_top": 0,
-            "margin_bottom": 20
-          }
-        },
-        "product-slide-item": {
-          "type": "card-product-flex",
-          "settings": {
-            "product": "{{ closest.product }}",
-            "content_direction": "column",
-            "wrap": "no-wrap",
-            "align_items": "stretch",
-            "justify_content": "start"
-          }
-        }
-      },
-      "block_order": [
-        "section-header",
-        "product-slide-item"
-      ],
       "settings": {
         "collection": "",
         "layout_type": "grid",
         "products_to_show": 4,
         "columns_desktop": 4,
-        "columns_gap": 20,
-        "rows_gap": 20,
+        "columns_gap": 16,
+        "rows_gap": 16,
         "media_size": "medium",
-        "media_ratio": "adapt",
-        "color_scheme": "scheme-1",
-        "page_width": "page-width",
-        "columns_mobile": "2",
-        "full_width": false,
-        "content_heading": "<p>NUEVOS LANZAMIENTOS</p>",
-        "heading_type_preset": "rte",
-        "content_subheading": "<p>Lo Último</p>",
-        "subheading_type_preset": "rte",
-        "show_more_product": true,
-        "show_more_product_text": "Ver Todo"
+        "media_ratio": "portrait",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
-    "split_banner": {
+    "jp_split": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n  .jp-split-banner {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    min-height: 500px;\n    overflow: hidden;\n  }\n  @media (max-width: 749px) {\n    .jp-split-banner {\n      grid-template-columns: 1fr;\n    }\n  }\n  .jp-split-banner__content {\n    background-color: #001E4A;\n    color: #FFFFFF;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    padding: 60px 50px;\n  }\n  .jp-split-banner__tag {\n    font-size: 0.85rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    margin-bottom: 16px;\n    opacity: 0.8;\n  }\n  .jp-split-banner__heading {\n    font-size: 2.8rem;\n    font-weight: 800;\n    line-height: 1.1;\n    margin: 0 0 20px 0;\n    text-transform: uppercase;\n  }\n  .jp-split-banner__heading span {\n    color: #FFD600;\n  }\n  .jp-split-banner__text {\n    font-size: 1rem;\n    line-height: 1.6;\n    margin-bottom: 30px;\n    opacity: 0.85;\n    max-width: 420px;\n  }\n  .jp-split-banner__btn {\n    display: inline-block;\n    background-color: #FFD600;\n    color: #0A0A0A;\n    padding: 14px 36px;\n    font-size: 0.9rem;\n    font-weight: 700;\n    text-transform: uppercase;\n    text-decoration: none;\n    letter-spacing: 1px;\n    transition: background-color 0.3s;\n    width: fit-content;\n  }\n  .jp-split-banner__btn:hover {\n    background-color: #e6c200;\n  }\n  .jp-split-banner__image {\n    background-color: #E5E5E5;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 400px;\n    position: relative;\n    overflow: hidden;\n  }\n  .jp-split-banner__image svg {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n</style>\n<div class=\"jp-split-banner\">\n  <div class=\"jp-split-banner__content\">\n    <div class=\"jp-split-banner__tag\">Colección Mujer</div>\n    <h2 class=\"jp-split-banner__heading\">CONQUISTA CON<br><span>DISCIPLINA</span></h2>\n    <p class=\"jp-split-banner__text\">Ropa deportiva diseñada para acompañarte en cada entrenamiento. Comodidad, estilo y rendimiento en cada prenda.</p>\n    <a href=\"/collections/all\" class=\"jp-split-banner__btn\">Ver Todo</a>\n  </div>\n  <div class=\"jp-split-banner__image\">\n    {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}\n  </div>\n</div>",
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"split-banner\" id=\"collections\">\n  <div class=\"split-left\">\n    <div class=\"split-left-content\">\n      <p class=\"section-tag\">Coleccion Mujer</p>\n      <h2 class=\"section-title\">CONQUISTA<br>CON <span style=\"color:var(--yellow)\">DISCIPLINA</span></h2>\n      <p class=\"section-subtitle\">Descubre nuestra linea completa de activewear disenada para mujeres que entrenan con proposito.</p>\n      <a href=\"/collections/all\" class=\"btn-primary\">Ver Todo</a>\n    </div>\n  </div>\n  <div class=\"split-right\">\n    {{ 'split-banner.png' | asset_url | image_tag: alt: 'Crop Top Juanpi Sport' }}\n  </div>\n</section>\n</div>",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "editors_picks": {
+    "jp_picks": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n  .jp-picks {\n    max-width: 1400px;\n    margin: 0 auto;\n    padding: 0 20px;\n  }\n  .jp-picks__header {\n    text-align: center;\n    margin-bottom: 40px;\n  }\n  .jp-picks__tag {\n    font-size: 0.85rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #666;\n    margin-bottom: 12px;\n  }\n  .jp-picks__title {\n    font-size: 2.4rem;\n    font-weight: 800;\n    text-transform: uppercase;\n    color: #0A0A0A;\n    margin: 0;\n  }\n  .jp-picks__grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: auto auto;\n    gap: 16px;\n  }\n  @media (max-width: 749px) {\n    .jp-picks__grid {\n      grid-template-columns: 1fr;\n    }\n  }\n  .jp-picks__item {\n    position: relative;\n    overflow: hidden;\n    background-color: #F0F0F0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 320px;\n  }\n  .jp-picks__item:first-child {\n    grid-row: span 2;\n    min-height: 656px;\n  }\n  .jp-picks__item svg {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n  .jp-picks__overlay {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    padding: 24px;\n    background: linear-gradient(transparent, rgba(0,0,0,0.7));\n    color: #FFFFFF;\n  }\n  .jp-picks__item-title {\n    font-size: 1.1rem;\n    font-weight: 700;\n    text-transform: uppercase;\n    margin: 0 0 4px 0;\n  }\n  .jp-picks__item-price {\n    font-size: 0.9rem;\n    color: #FFD600;\n    font-weight: 600;\n  }\n</style>\n<div class=\"jp-picks\">\n  <div class=\"jp-picks__header\">\n    <div class=\"jp-picks__tag\">Selección Especial</div>\n    <h2 class=\"jp-picks__title\">FAVORITOS DEL EDITOR</h2>\n  </div>\n  <div class=\"jp-picks__grid\">\n    <div class=\"jp-picks__item\">\n      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-picks__overlay\">\n        <div class=\"jp-picks__item-title\">Enterizo Deportivo</div>\n        <div class=\"jp-picks__item-price\">Desde $115.000</div>\n      </div>\n    </div>\n    <div class=\"jp-picks__item\">\n      {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-picks__overlay\">\n        <div class=\"jp-picks__item-title\">Vestido Deportivo</div>\n        <div class=\"jp-picks__item-price\">Desde $85.000</div>\n      </div>\n    </div>\n    <div class=\"jp-picks__item\">\n      {{ 'product-3' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-picks__overlay\">\n        <div class=\"jp-picks__item-title\">Conjunto Algodón</div>\n        <div class=\"jp-picks__item-price\">Desde $125.000</div>\n      </div>\n    </div>\n    <div class=\"jp-picks__item\">\n      {{ 'product-4' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-picks__overlay\">\n        <div class=\"jp-picks__item-title\">Conjunto Deportivo Crop Top + Short</div>\n        <div class=\"jp-picks__item-price\">Desde $95.000</div>\n      </div>\n    </div>\n  </div>\n</div>",
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section\" id=\"picks\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <p class=\"section-tag\">Seleccion Especial</p>\n      <h2 class=\"section-title\">FAVORITOS DEL <span class=\"highlight\">EDITOR</span></h2>\n    </div>\n    <div class=\"picks-grid\">\n      <div class=\"pick-card\">\n        {{ 'pick-1.png' | asset_url | image_tag: alt: 'Enterizo' }}\n        <div class=\"pick-overlay\">\n          <h3>Enterizo Deportivo</h3>\n          <p>Tela nylon &bull; Copas &bull; Push up</p>\n          <span class=\"pick-price\">Desde $115.000</span>\n        </div>\n      </div>\n      <div class=\"pick-card\">\n        {{ 'pick-2.png' | asset_url | image_tag: alt: 'Vestido' }}\n        <div class=\"pick-overlay\">\n          <h3>Vestido Deportivo</h3>\n          <p>Estilo y movimiento</p>\n          <span class=\"pick-price\">Desde $85.000</span>\n        </div>\n      </div>\n      <div class=\"pick-card\">\n        {{ 'pick-3.png' | asset_url | image_tag: alt: 'Conjunto Algodon' }}\n        <div class=\"pick-overlay\">\n          <h3>Conjunto Algodon</h3>\n          <p>Comodidad total</p>\n          <span class=\"pick-price\">Desde $125.000</span>\n        </div>\n      </div>\n      <div class=\"pick-card\">\n        {{ 'pick-4.png' | asset_url | image_tag: alt: 'Conjunto Deportivo' }}\n        <div class=\"pick-overlay\">\n          <h3>Conjunto Deportivo</h3>\n          <p>Crop top + Short &bull; Multiples colores</p>\n          <span class=\"pick-price\">Desde $95.000</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n</div>",
         "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "sale_countdown": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<style>\n  .jp-sale {\n    background-color: #0A0A0A;\n    color: #FFFFFF;\n    text-align: center;\n    padding: 70px 20px;\n  }\n  .jp-sale__tag {\n    font-size: 0.85rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #999;\n    margin-bottom: 12px;\n  }\n  .jp-sale__title {\n    font-size: 2.4rem;\n    font-weight: 800;\n    text-transform: uppercase;\n    margin: 0 0 20px 0;\n  }\n  .jp-sale__discount {\n    font-size: 5rem;\n    font-weight: 900;\n    color: #FFD600;\n    line-height: 1;\n    margin-bottom: 30px;\n  }\n  @media (max-width: 749px) {\n    .jp-sale__discount {\n      font-size: 3.5rem;\n    }\n  }\n  .jp-sale__countdown {\n    display: flex;\n    justify-content: center;\n    gap: 24px;\n    margin-bottom: 40px;\n  }\n  .jp-sale__countdown-item {\n    text-align: center;\n  }\n  .jp-sale__countdown-number {\n    display: block;\n    font-size: 2.8rem;\n    font-weight: 800;\n    color: #FFFFFF;\n    line-height: 1;\n    min-width: 70px;\n    padding: 12px 16px;\n    border: 2px solid rgba(255,255,255,0.15);\n    border-radius: 8px;\n    margin-bottom: 8px;\n  }\n  .jp-sale__countdown-label {\n    font-size: 0.75rem;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    color: #999;\n  }\n  .jp-sale__btn {\n    display: inline-block;\n    background-color: #FFD600;\n    color: #0A0A0A;\n    padding: 16px 48px;\n    font-size: 0.95rem;\n    font-weight: 700;\n    text-transform: uppercase;\n    text-decoration: none;\n    letter-spacing: 1px;\n    transition: background-color 0.3s;\n  }\n  .jp-sale__btn:hover {\n    background-color: #e6c200;\n  }\n</style>\n<div class=\"jp-sale\">\n  <div class=\"jp-sale__tag\">Oferta Especial</div>\n  <h2 class=\"jp-sale__title\">REBAJAS DE TEMPORADA</h2>\n  <div class=\"jp-sale__discount\">70% OFF</div>\n  <div class=\"jp-sale__countdown\" id=\"jp-countdown\">\n    <div class=\"jp-sale__countdown-item\">\n      <span class=\"jp-sale__countdown-number\" id=\"jp-days\">00</span>\n      <span class=\"jp-sale__countdown-label\">Días</span>\n    </div>\n    <div class=\"jp-sale__countdown-item\">\n      <span class=\"jp-sale__countdown-number\" id=\"jp-hours\">00</span>\n      <span class=\"jp-sale__countdown-label\">Horas</span>\n    </div>\n    <div class=\"jp-sale__countdown-item\">\n      <span class=\"jp-sale__countdown-number\" id=\"jp-minutes\">00</span>\n      <span class=\"jp-sale__countdown-label\">Minutos</span>\n    </div>\n    <div class=\"jp-sale__countdown-item\">\n      <span class=\"jp-sale__countdown-number\" id=\"jp-seconds\">00</span>\n      <span class=\"jp-sale__countdown-label\">Segundos</span>\n    </div>\n  </div>\n  <a href=\"/collections/ofertas\" class=\"jp-sale__btn\">Comprar Ahora</a>\n</div>\n<script>\n  (function() {\n    var endDate = new Date('2026-12-31T23:59:59').getTime();\n    function updateCountdown() {\n      var now = new Date().getTime();\n      var diff = endDate - now;\n      if (diff <= 0) {\n        document.getElementById('jp-days').textContent = '00';\n        document.getElementById('jp-hours').textContent = '00';\n        document.getElementById('jp-minutes').textContent = '00';\n        document.getElementById('jp-seconds').textContent = '00';\n        return;\n      }\n      var days = Math.floor(diff / (1000 * 60 * 60 * 24));\n      var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n      var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));\n      var seconds = Math.floor((diff % (1000 * 60)) / 1000);\n      document.getElementById('jp-days').textContent = String(days).padStart(2, '0');\n      document.getElementById('jp-hours').textContent = String(hours).padStart(2, '0');\n      document.getElementById('jp-minutes').textContent = String(minutes).padStart(2, '0');\n      document.getElementById('jp-seconds').textContent = String(seconds).padStart(2, '0');\n    }\n    updateCountdown();\n    setInterval(updateCountdown, 1000);\n  })();\n</script>",
-        "color_scheme": "scheme-4",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "instagram_gallery": {
+    "jp_sale": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n  .jp-insta {\n    max-width: 1400px;\n    margin: 0 auto;\n    padding: 0 20px;\n  }\n  .jp-insta__header {\n    text-align: center;\n    margin-bottom: 40px;\n  }\n  .jp-insta__tag {\n    font-size: 0.85rem;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #666;\n    margin-bottom: 12px;\n  }\n  .jp-insta__title {\n    font-size: 2.4rem;\n    font-weight: 800;\n    text-transform: uppercase;\n    color: #0A0A0A;\n    margin: 0;\n  }\n  .jp-insta__grid {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    gap: 16px;\n  }\n  @media (max-width: 749px) {\n    .jp-insta__grid {\n      grid-template-columns: repeat(2, 1fr);\n    }\n  }\n  .jp-insta__item {\n    aspect-ratio: 1;\n    background-color: #F0F0F0;\n    overflow: hidden;\n    position: relative;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    cursor: pointer;\n    transition: opacity 0.3s;\n  }\n  .jp-insta__item:hover {\n    opacity: 0.85;\n  }\n  .jp-insta__item > svg,\n  .jp-insta__item > .placeholder-svg {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n  .jp-insta__icon {\n    position: absolute;\n    top: 0;\n    left: 0;\n    opacity: 0;\n    transition: opacity 0.3s;\n    background: rgba(0,0,0,0.5);\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .jp-insta__item:hover .jp-insta__icon {\n    opacity: 1;\n  }\n  .jp-insta__icon svg {\n    width: 28px;\n    height: 28px;\n    fill: #FFFFFF;\n  }\n</style>\n<div class=\"jp-insta\">\n  <div class=\"jp-insta__header\">\n    <div class=\"jp-insta__tag\">@juanpisport</div>\n    <h2 class=\"jp-insta__title\">GALERÍA DE ESTILO</h2>\n  </div>\n  <div class=\"jp-insta__grid\">\n    <div class=\"jp-insta__item\">\n      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-insta__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\"/></svg></div>\n    </div>\n    <div class=\"jp-insta__item\">\n      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-insta__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\"/></svg></div>\n    </div>\n    <div class=\"jp-insta__item\">\n      {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-insta__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\"/></svg></div>\n    </div>\n    <div class=\"jp-insta__item\">\n      {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg' }}\n      <div class=\"jp-insta__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\"/></svg></div>\n    </div>\n  </div>\n</div>",
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section sale-section\" id=\"sale\">\n  <div class=\"container\">\n    <div class=\"sale-inner\">\n      <p class=\"section-tag\">Oferta Especial</p>\n      <h2 class=\"section-title\">REBAJAS DE <span style=\"color:var(--yellow)\">TEMPORADA</span></h2>\n      <div class=\"sale-percent\">70<span>% OFF</span></div>\n      <div class=\"countdown\" id=\"countdown\">\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-days\">00</span><span class=\"label\">Dias</span></div>\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-hours\">00</span><span class=\"label\">Horas</span></div>\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-minutes\">00</span><span class=\"label\">Min</span></div>\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-seconds\">00</span><span class=\"label\">Seg</span></div>\n      </div>\n      <a href=\"/collections\" class=\"btn-primary\" style=\"display:inline-block;\">Comprar Ahora</a>\n    </div>\n  </div>\n</section>\n<script>\n(function(){\n  function updateCountdown(){\n    var end=new Date('December 31, 2026 18:00:00').getTime();\n    var now=Date.now();\n    var diff=end-now;\n    if(diff<=0)return;\n    var d=Math.floor(diff/86400000);\n    var h=Math.floor((diff%86400000)/3600000);\n    var m=Math.floor((diff%3600000)/60000);\n    var s=Math.floor((diff%60000)/1000);\n    var de=document.getElementById('jp-days');if(de)de.textContent=String(d).padStart(2,'0');\n    var he=document.getElementById('jp-hours');if(he)he.textContent=String(h).padStart(2,'0');\n    var me=document.getElementById('jp-minutes');if(me)me.textContent=String(m).padStart(2,'0');\n    var se=document.getElementById('jp-seconds');if(se)se.textContent=String(s).padStart(2,'0');\n  }\n  updateCountdown();\n  setInterval(updateCountdown,1000);\n})();\n</script>\n</div>",
         "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "bnpl_features": {
+    "jp_gallery": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n  .jp-bnpl {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 0 20px;\n    text-align: center;\n  }\n  .jp-bnpl__title {\n    font-size: 2rem;\n    font-weight: 800;\n    text-transform: uppercase;\n    color: #0A0A0A;\n    margin: 0 0 50px 0;\n  }\n  .jp-bnpl__grid {\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    gap: 30px;\n  }\n  @media (max-width: 749px) {\n    .jp-bnpl__grid {\n      grid-template-columns: repeat(2, 1fr);\n      gap: 24px;\n    }\n  }\n  .jp-bnpl__item {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 16px;\n  }\n  .jp-bnpl__icon {\n    width: 56px;\n    height: 56px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 50%;\n    background-color: #001E4A;\n  }\n  .jp-bnpl__icon svg {\n    width: 26px;\n    height: 26px;\n    fill: #FFD600;\n  }\n  .jp-bnpl__label {\n    font-size: 1rem;\n    font-weight: 700;\n    color: #0A0A0A;\n    text-transform: uppercase;\n  }\n  .jp-bnpl__desc {\n    font-size: 0.85rem;\n    color: #666;\n    line-height: 1.5;\n  }\n</style>\n<div class=\"jp-bnpl\">\n  <h2 class=\"jp-bnpl__title\">COMPRA AHORA, PAGA DESPUÉS</h2>\n  <div class=\"jp-bnpl__grid\">\n    <div class=\"jp-bnpl__item\">\n      <div class=\"jp-bnpl__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z\"/></svg></div>\n      <div class=\"jp-bnpl__label\">Tarjetas</div>\n      <div class=\"jp-bnpl__desc\">Crédito y débito</div>\n    </div>\n    <div class=\"jp-bnpl__item\">\n      <div class=\"jp-bnpl__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M19 14V6c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zm-2 0H3V6h14v8zm-7-1c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm13-6v11c0 1.1-.9 2-2 2H4v-2h17V7h2z\"/></svg></div>\n      <div class=\"jp-bnpl__label\">Cuotas</div>\n      <div class=\"jp-bnpl__desc\">Hasta 12 sin interés</div>\n    </div>\n    <div class=\"jp-bnpl__item\">\n      <div class=\"jp-bnpl__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z\"/></svg></div>\n      <div class=\"jp-bnpl__label\">Envío Seguro</div>\n      <div class=\"jp-bnpl__desc\">Entrega protegida</div>\n    </div>\n    <div class=\"jp-bnpl__item\">\n      <div class=\"jp-bnpl__icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z\"/></svg></div>\n      <div class=\"jp-bnpl__label\">Soporte WhatsApp</div>\n      <div class=\"jp-bnpl__desc\">Atención inmediata</div>\n    </div>\n  </div>\n</div>",
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section gallery\" id=\"gallery\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <p class=\"section-tag\">@juanpisport</p>\n      <h2 class=\"section-title\">GALERIA DE <span class=\"highlight\">ESTILO</span></h2>\n      <p class=\"section-subtitle\">Siguenos en Instagram para mas inspiracion.</p>\n    </div>\n  </div>\n  <div class=\"gallery-grid\">\n    <div class=\"gallery-item\">\n      {{ 'gallery-1.jpg' | asset_url | image_tag: alt: 'Crop Top Lyra' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n    <div class=\"gallery-item\">\n      {{ 'gallery-2.jpg' | asset_url | image_tag: alt: 'Set Corto Seila' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n    <div class=\"gallery-item\">\n      {{ 'gallery-3.jpg' | asset_url | image_tag: alt: 'Chaqueta Fenova' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n    <div class=\"gallery-item\">\n      {{ 'gallery-4.jpg' | asset_url | image_tag: alt: 'Falda Zenova' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n  </div>\n</section>\n</div>",
         "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "newsletter_section": {
+    "jp_bnpl": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<style>\n  .jp-newsletter {\n    background-color: #001E4A;\n    color: #FFFFFF;\n    text-align: center;\n    padding: 70px 20px;\n  }\n  .jp-newsletter__inner {\n    max-width: 600px;\n    margin: 0 auto;\n  }\n  .jp-newsletter__title {\n    font-size: 2.4rem;\n    font-weight: 800;\n    text-transform: uppercase;\n    margin: 0 0 16px 0;\n  }\n  .jp-newsletter__text {\n    font-size: 1rem;\n    line-height: 1.6;\n    opacity: 0.8;\n    margin-bottom: 30px;\n  }\n  .jp-newsletter__form {\n    display: flex;\n    gap: 0;\n    max-width: 480px;\n    margin: 0 auto;\n  }\n  @media (max-width: 749px) {\n    .jp-newsletter__form {\n      flex-direction: column;\n      gap: 12px;\n    }\n  }\n  .jp-newsletter__input {\n    flex: 1;\n    padding: 14px 20px;\n    border: 2px solid rgba(255,255,255,0.2);\n    background: transparent;\n    color: #FFFFFF;\n    font-size: 0.95rem;\n    outline: none;\n    transition: border-color 0.3s;\n  }\n  .jp-newsletter__input::placeholder {\n    color: rgba(255,255,255,0.5);\n  }\n  .jp-newsletter__input:focus {\n    border-color: #FFD600;\n  }\n  .jp-newsletter__btn {\n    background-color: #FFD600;\n    color: #0A0A0A;\n    border: none;\n    padding: 14px 32px;\n    font-size: 0.9rem;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    cursor: pointer;\n    transition: background-color 0.3s;\n    white-space: nowrap;\n  }\n  .jp-newsletter__btn:hover {\n    background-color: #e6c200;\n  }\n</style>\n<div class=\"jp-newsletter\">\n  <div class=\"jp-newsletter__inner\">\n    <h2 class=\"jp-newsletter__title\">ÚNETE AL MOVIMIENTO</h2>\n    <p class=\"jp-newsletter__text\">Suscríbete y recibe ofertas exclusivas, acceso anticipado a nuevas colecciones y contenido especial para tu entrenamiento.</p>\n    {% form 'customer', id: 'jp-newsletter-form' %}\n      <div class=\"jp-newsletter__form\">\n        <input type=\"hidden\" name=\"contact[tags]\" value=\"newsletter\">\n        <input type=\"email\" name=\"contact[email]\" class=\"jp-newsletter__input\" placeholder=\"Tu correo electrónico\" required aria-label=\"Correo electrónico\">\n        <button type=\"submit\" class=\"jp-newsletter__btn\">Suscribirme</button>\n      </div>\n    {% endform %}\n  </div>\n</div>",
-        "color_scheme": "scheme-4",
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section bnpl\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <h2 class=\"section-title\">COMPRA AHORA, <span class=\"highlight\">PAGA DESPUES</span></h2>\n      <p class=\"section-subtitle\">Opciones de pago flexibles para que entrenes sin preocupaciones.</p>\n    </div>\n    <div class=\"bnpl-icons\">\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\"/><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"/></svg>\n        </div>\n        <strong>Tarjetas</strong>\n        <p>Credito y debito sin recargo</p>\n      </div>\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>\n        </div>\n        <strong>Cuotas</strong>\n        <p>Hasta 12 cuotas sin interes</p>\n      </div>\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>\n        </div>\n        <strong>Envio Seguro</strong>\n        <p>Empaque protegido a todo el pais</p>\n      </div>\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"/><polyline points=\"22,6 12,13 2,6\"/></svg>\n        </div>\n        <strong>Soporte</strong>\n        <p>Atencion personalizada por WhatsApp</p>\n      </div>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "jp_newsletter": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section newsletter\">\n  <div class=\"container\">\n    <div class=\"newsletter-inner\">\n      <p class=\"section-tag\">Newsletter</p>\n      <h2 class=\"section-title\">UNETE AL MOVIMIENTO</h2>\n      <p class=\"section-subtitle\">Recibe ofertas exclusivas, lanzamientos y consejos de entrenamiento directo en tu correo.</p>\n      {% form 'customer' %}\n        <div class=\"newsletter-form\">\n          <input type=\"hidden\" name=\"contact[tags]\" value=\"newsletter\">\n          <input type=\"email\" name=\"contact[email]\" placeholder=\"Tu correo electronico\" required>\n          <button type=\"submit\">Suscribirme</button>\n        </div>\n      {% endform %}\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
     }
   },
   "order": [
-    "hero_slideshow",
-    "categories_marquee",
-    "new_releases",
-    "split_banner",
-    "editors_picks",
-    "sale_countdown",
-    "instagram_gallery",
-    "bnpl_features",
-    "newsletter_section"
+    "jp_css_loader",
+    "jp_hero",
+    "jp_marquee",
+    "jp_releases_header",
+    "jp_releases",
+    "jp_split",
+    "jp_picks",
+    "jp_sale",
+    "jp_gallery",
+    "jp_bnpl",
+    "jp_newsletter"
   ]
 }
