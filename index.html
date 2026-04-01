@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juanpi Sport — Ropa Deportiva Femenina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   CSS VARIABLES — JUANPI SPORT
+   ═══════════════════════════════════════ */
+:root {
+  --navy: #001E4A;
+  --navy-deep: #000D2B;
+  --yellow: #FFD600;
+  --yellow-warm: #FFCA28;
+  --black: #0A0A0A;
+  --white: #FFFFFF;
+  --off-white: #F7F5F2;
+  --gray-100: #F0EDED;
+  --gray-200: #E0DCDC;
+  --gray-400: #969696;
+  --gray-600: #4A4A4A;
+  --rose: #8B3A4A;
+  --blush: #C7B2A1;
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-accent: 'Archivo', sans-serif;
+  --page-width: 1600px;
+  --transition: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ═══════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; }
+ul { list-style: none; }
+
+.container {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 48px);
+}
+
+/* ═══════════════════════════════════════
+   ANNOUNCEMENT BAR
+   ═══════════════════════════════════════ */
+.announcement {
+  background: var(--navy);
+  color: var(--yellow);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 16px;
+  position: relative;
+  overflow: hidden;
+}
+.announcement::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 200%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,214,0,0.06), transparent);
+  animation: announceShimmer 4s ease infinite;
+}
+@keyframes announceShimmer {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(50%); }
+}
+.announcement span { position: relative; z-index: 1; }
+
+/* ═══════════════════════════════════════
+   HEADER / NAVIGATION
+   ═══════════════════════════════════════ */
+.header {
+  background: var(--navy-deep);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.4s var(--transition);
+}
+.header.scrolled {
+  box-shadow: 0 4px 30px rgba(0,30,74,0.3);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(16px, 3vw, 48px);
+  height: 72px;
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--yellow);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.nav-links a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--white);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--yellow);
+  transition: width 0.4s var(--transition);
+}
+.nav-links a:hover { color: var(--yellow); }
+.nav-links a:hover::after { width: 100%; }
+
+.header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header-actions button,
+.header-actions a {
+  color: var(--white);
+  transition: color 0.3s;
+}
+.header-actions button:hover,
+.header-actions a:hover { color: var(--yellow); }
+.header-actions svg { width: 22px; height: 22px; }
+
+.cart-count {
+  position: relative;
+}
+.cart-count .badge {
+  position: absolute;
+  top: -6px; right: -8px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 0.6rem;
+  font-weight: 700;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.menu-toggle span {
+  width: 24px; height: 2px;
+  background: var(--white);
+  transition: all 0.3s;
+}
+
+/* ═══════════════════════════════════════
+   HERO SECTION
+   ═══════════════════════════════════════ */
+.hero {
+  position: relative;
+  height: clamp(500px, 85vh, 900px);
+  background: var(--navy-deep);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: contrast(1.1);
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,13,43,0.92) 0%, rgba(0,30,74,0.6) 50%, rgba(0,13,43,0.85) 100%);
+  z-index: 1;
+}
+.hero-grid-pattern {
+  position: absolute;
+  inset: 0; z-index: 2;
+  background-image:
+    linear-gradient(rgba(255,214,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,214,0,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5vw, 80px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.hero-text { animation: heroFadeUp 1s var(--transition) both; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-tag {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--yellow);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-tag::before {
+  content: '';
+  width: 32px; height: 2px;
+  background: var(--yellow);
+}
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero-title .accent {
+  color: var(--yellow);
+  display: block;
+}
+.hero-subtitle {
+  color: rgba(255,255,255,0.65);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 36px;
+}
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  background: var(--yellow);
+  color: var(--navy);
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+  transition: all 0.4s var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+.btn-primary:hover::before { left: 100%; }
+.btn-primary:hover {
+  background: transparent;
+  color: var(--yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,214,0,0.2);
+}
+
+.btn-secondary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.4s var(--transition);
+}
+.btn-secondary:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-2px);
+}
+
+.hero-images {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: heroImgFade 1.2s var(--transition) 0.3s both;
+}
+@keyframes heroImgFade {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.hero-img-main {
+  width: 360px;
+  height: 480px;
+  object-fit: cover;
+  border: 3px solid rgba(255,214,0,0.15);
+  position: relative;
+  z-index: 2;
+}
+.hero-img-secondary {
+  width: 240px;
+  height: 340px;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  border: 3px solid rgba(255,214,0,0.1);
+  z-index: 1;
+  opacity: 0.8;
+}
+.hero-float-badge {
+  position: absolute;
+  bottom: 15%;
+  left: -10%;
+  background: var(--yellow);
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  z-index: 3;
+  animation: floatBadge 3s ease-in-out infinite;
+}
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ═══════════════════════════════════════
+   SECTION STYLES (shared)
+   ═══════════════════════════════════════ */
+.section {
+  padding: clamp(48px, 8vw, 100px) 0;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 60px);
+}
+.section-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--black);
+}
+.section-title .highlight {
+  color: var(--navy);
+}
+.section-subtitle {
+  color: var(--gray-400);
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+/* ═══════════════════════════════════════
+   CATEGORIES STRIP
+   ═══════════════════════════════════════ */
+.categories {
+  background: var(--off-white);
+  padding: 0;
+  overflow: hidden;
+}
+.categories-inner {
+  display: flex;
+  animation: scrollCategories 20s linear infinite;
+}
+.categories-inner:hover { animation-play-state: paused; }
+.cat-item {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  color: var(--gray-600);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.cat-item:hover { color: var(--navy); }
+.cat-item::after {
+  content: '\2726';
+  color: var(--yellow);
+  font-size: 0.6em;
+}
+@keyframes scrollCategories {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ═══════════════════════════════════════
+   PRODUCT GRID
+   ═══════════════════════════════════════ */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.product-card {
+  position: relative;
+  background: var(--white);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s var(--transition);
+}
+.product-card:hover { transform: translateY(-4px); }
+.product-card-img {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--gray-100);
+}
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--transition);
+}
+.product-card:hover .product-card-img img {
+  transform: scale(1.06);
+}
+.product-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  z-index: 2;
+}
+.badge-new {
+  background: var(--navy);
+  color: var(--white);
+}
+.badge-sale {
+  background: #E53935;
+  color: var(--white);
+}
+.badge-hot {
+  background: var(--yellow);
+  color: var(--navy);
+}
+.product-actions {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.4));
+  transform: translateY(100%);
+  transition: transform 0.5s var(--transition);
+}
+.product-card:hover .product-actions {
+  transform: translateY(0);
+}
+.product-action-btn {
+  width: 40px; height: 40px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.product-action-btn:hover {
+  background: var(--yellow);
+}
+.product-action-btn svg { width: 16px; height: 16px; }
+
+.product-info {
+  padding: 16px 4px;
+}
+.product-vendor {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 4px;
+}
+.product-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  color: var(--black);
+}
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product-price .current {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--navy);
+}
+.product-price .compare {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  text-decoration: line-through;
+}
+.product-swatches {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.swatch {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-200);
+  transition: border-color 0.3s;
+  cursor: pointer;
+}
+.swatch:hover, .swatch.active { border-color: var(--navy); }
+
+/* ═══════════════════════════════════════
+   NEW RELEASES
+   ═══════════════════════════════════════ */
+.new-releases { background: var(--white); }
+
+/* ═══════════════════════════════════════
+   SPLIT BANNER
+   ═══════════════════════════════════════ */
+.split-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+.split-left {
+  background: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px, 6vw, 80px);
+  position: relative;
+  overflow: hidden;
+}
+.split-left::before {
+  content: '';
+  position: absolute;
+  width: 300px; height: 300px;
+  border: 40px solid rgba(255,214,0,0.04);
+  border-radius: 50%;
+  top: -80px; right: -80px;
+}
+.split-left-content {
+  position: relative;
+  z-index: 1;
+}
+.split-left .section-tag { color: var(--yellow); margin-bottom: 12px; }
+.split-left .section-title {
+  color: var(--white);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 20px;
+}
+.split-left .section-subtitle {
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 32px;
+  max-width: 400px;
+}
+.split-right {
+  position: relative;
+  overflow: hidden;
+}
+.split-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 6s var(--transition);
+}
+.split-banner:hover .split-right img {
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════
+   EDITORS PICKS — ASYMMETRIC GRID
+   ═══════════════════════════════════════ */
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.pick-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.pick-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--transition);
+}
+.pick-card:hover img { transform: scale(1.06); }
+.pick-card:nth-child(1) { grid-column: 1 / 6; grid-row: 1 / 3; min-height: 560px; }
+.pick-card:nth-child(2) { grid-column: 6 / 9; grid-row: 1; min-height: 270px; }
+.pick-card:nth-child(3) { grid-column: 9 / 13; grid-row: 1; min-height: 270px; }
+.pick-card:nth-child(4) { grid-column: 6 / 13; grid-row: 2; min-height: 270px; }
+
+.pick-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,13,43,0.75), transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.pick-card:hover .pick-overlay { opacity: 1; }
+.pick-overlay h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.1em;
+}
+.pick-overlay p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+.pick-overlay .pick-price {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  color: var(--yellow);
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+/* ═══════════════════════════════════════
+   COUNTDOWN / SALE SECTION
+   ═══════════════════════════════════════ */
+.sale-section {
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+.sale-section::before {
+  content: 'SALE';
+  position: absolute;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(10rem, 25vw, 22rem);
+  color: rgba(255,255,255,0.02);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.sale-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.sale-inner .section-tag { color: var(--yellow); }
+.sale-inner .section-title {
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 8px;
+}
+.sale-percent {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: var(--yellow);
+  line-height: 1;
+  margin: 16px 0;
+  text-shadow: 0 0 60px rgba(255,214,0,0.3);
+}
+.sale-percent span { font-size: 0.4em; vertical-align: super; }
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0 40px;
+}
+.countdown-item {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  padding: 16px 20px;
+  min-width: 80px;
+  text-align: center;
+}
+.countdown-item .num {
+  font-family: var(--font-accent);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--white);
+  line-height: 1;
+}
+.countdown-item .label {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════
+   IMAGE GALLERY / INSTAGRAM
+   ═══════════════════════════════════════ */
+.gallery {
+  background: var(--off-white);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+.gallery-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--transition), filter 0.6s;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.7);
+}
+.gallery-item .ig-icon {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: var(--white);
+  transition: transform 0.4s var(--transition);
+}
+.gallery-item:hover .ig-icon {
+  transform: translate(-50%, -50%) scale(1);
+}
+.gallery-item .ig-icon svg { width: 28px; height: 28px; }
+
+/* ═══════════════════════════════════════
+   BUY NOW PAY LATER
+   ═══════════════════════════════════════ */
+.bnpl {
+  background: var(--white);
+  text-align: center;
+}
+.bnpl-icons {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.bnpl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 160px;
+}
+.bnpl-icon {
+  width: 56px; height: 56px;
+  background: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--transition);
+}
+.bnpl-item:hover .bnpl-icon { transform: scale(1.1); }
+.bnpl-icon svg { width: 24px; height: 24px; color: var(--yellow); }
+.bnpl-item p {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.4;
+}
+.bnpl-item strong {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  color: var(--black);
+}
+
+/* ═══════════════════════════════════════
+   NEWSLETTER
+   ═══════════════════════════════════════ */
+.newsletter {
+  background: var(--navy-deep);
+  position: relative;
+  overflow: hidden;
+}
+.newsletter::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,214,0,0.06), transparent 70%);
+  top: -200px; right: -100px;
+}
+.newsletter-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.newsletter .section-tag { color: var(--yellow); }
+.newsletter .section-title {
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.newsletter .section-subtitle {
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 32px;
+}
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.15);
+  border-right: none;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.35); }
+.newsletter-form input:focus { border-color: var(--yellow); }
+.newsletter-form button {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  background: var(--yellow);
+  color: var(--navy);
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.newsletter-form button:hover {
+  background: transparent;
+  color: var(--yellow);
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════ */
+.footer {
+  background: var(--black);
+  color: rgba(255,255,255,0.5);
+  padding: 64px 0 32px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand .logo-text {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  max-width: 280px;
+  margin-bottom: 20px;
+}
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+.footer-socials a {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.footer-socials a:hover {
+  border-color: var(--yellow);
+  background: var(--yellow);
+  color: var(--navy);
+}
+.footer-socials svg { width: 16px; height: 16px; }
+
+.footer-col h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.footer-col a {
+  display: block;
+  font-size: 0.85rem;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--yellow); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.payment-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.payment-icons span {
+  background: rgba(255,255,255,0.08);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ═══════════════════════════════════════
+   SCROLL REVEAL
+   ═══════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-images { display: none; }
+  .split-banner { grid-template-columns: 1fr; }
+  .split-right { min-height: 400px; }
+  .picks-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .pick-card:nth-child(1) { grid-column: 1 / 3; min-height: 400px; }
+  .pick-card:nth-child(2) { grid-column: 1; min-height: 250px; }
+  .pick-card:nth-child(3) { grid-column: 2; min-height: 250px; }
+  .pick-card:nth-child(4) { grid-column: 1 / 3; min-height: 300px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-toggle { display: flex; }
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero { height: auto; min-height: 70vh; padding: 60px 0; }
+  .hero-title { font-size: 2.6rem; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-secondary { width: 100%; text-align: center; }
+  .countdown { gap: 8px; }
+  .countdown-item { padding: 12px 14px; min-width: 60px; }
+  .countdown-item .num { font-size: 1.4rem; }
+  .bnpl-icons { gap: 24px; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { border-right: 2px solid rgba(255,255,255,0.15); }
+  .newsletter-form input:focus { border-right-color: var(--yellow); }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .picks-grid { grid-template-columns: 1fr; }
+  .pick-card:nth-child(1),
+  .pick-card:nth-child(4) { grid-column: 1; }
+  .pick-overlay { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .product-info { padding: 10px 2px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ═══════════════════════════════════════
+   MOBILE NAV OVERLAY
+   ═══════════════════════════════════════ */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--navy-deep);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  transform: translateX(100%);
+  transition: transform 0.5s var(--transition);
+}
+.mobile-nav.open { transform: translateX(0); }
+.mobile-nav a {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  transition: color 0.3s;
+}
+.mobile-nav a:hover { color: var(--yellow); }
+.mobile-nav-close {
+  position: absolute;
+  top: 20px; right: 24px;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ ANNOUNCEMENT BAR ═══════════ -->
+<div class="announcement">
+  <span>ENVIO GRATIS EN PEDIDOS SUPERIORES A $149.000 &nbsp;&bull;&nbsp; NUEVA COLECCION DISPONIBLE</span>
+</div>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <img src="fotos pagina web/logos/thumbnail_ISOTIPO 1 JUANPI SPORT_TRANSPARENTE.png" alt="Juanpi Sport">
+      </div>
+      <span class="logo-text">Juanpi Sport</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#new-releases">Novedades</a>
+      <a href="#collections">Colecciones</a>
+      <a href="#sale">Ofertas</a>
+      <a href="#gallery">Galeria</a>
+      <a href="#">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button aria-label="Buscar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="#" aria-label="Cuenta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a href="#" aria-label="Favoritos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </a>
+      <div class="cart-count">
+        <button aria-label="Carrito">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+        <span class="badge">2</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════ MOBILE NAV ═══════════ -->
+<div class="mobile-nav" id="mobileNav">
+  <span class="mobile-nav-close" id="mobileNavClose">&times;</span>
+  <a href="#">Inicio</a>
+  <a href="#new-releases">Novedades</a>
+  <a href="#collections">Colecciones</a>
+  <a href="#sale">Ofertas</a>
+  <a href="#gallery">Galeria</a>
+  <a href="#">Contacto</a>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="fotos pagina web/fotos canva/nuevos (4).png" alt="Juanpi Sport Set Deportivo">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">Nueva Coleccion 2026</div>
+      <h1 class="hero-title">
+        ENTRENA CON
+        <span class="accent">ACTITUD</span>
+      </h1>
+      <p class="hero-subtitle">
+        Ropa deportiva femenina de alto rendimiento. Disenada para brindar soporte, comodidad y estilo en cada movimiento.
+      </p>
+      <div class="hero-cta">
+        <a href="#new-releases" class="btn-primary">Ver Coleccion</a>
+        <a href="#sale" class="btn-secondary">Ofertas Especiales</a>
+      </div>
+    </div>
+    <div class="hero-images">
+      <img class="hero-img-main" src="fotos pagina web/fotos canva/Copia de nuevo 7 (6).png" alt="Set deportivo">
+      <img class="hero-img-secondary" src="fotos pagina web/fotos canva/Copia de nuevo 7 (7).png" alt="Conjunto deportivo">
+      <div class="hero-float-badge">Tela Nylon Premium</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CATEGORIES MARQUEE ═══════════ -->
+<div class="categories">
+  <div class="categories-inner">
+    <span class="cat-item">Crop Tops</span>
+    <span class="cat-item">Enterizos</span>
+    <span class="cat-item">Sets Deportivos</span>
+    <span class="cat-item">Faldas</span>
+    <span class="cat-item">Licras</span>
+    <span class="cat-item">Chaquetas</span>
+    <span class="cat-item">Shorts</span>
+    <span class="cat-item">Vestidos</span>
+    <span class="cat-item">Joggers</span>
+    <span class="cat-item">Pantalones</span>
+    <!-- duplicated for seamless loop -->
+    <span class="cat-item">Crop Tops</span>
+    <span class="cat-item">Enterizos</span>
+    <span class="cat-item">Sets Deportivos</span>
+    <span class="cat-item">Faldas</span>
+    <span class="cat-item">Licras</span>
+    <span class="cat-item">Chaquetas</span>
+    <span class="cat-item">Shorts</span>
+    <span class="cat-item">Vestidos</span>
+    <span class="cat-item">Joggers</span>
+    <span class="cat-item">Pantalones</span>
+  </div>
+</div>
+
+<!-- ═══════════ NEW RELEASES ═══════════ -->
+<section class="section new-releases" id="new-releases">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Lo Ultimo</p>
+      <h2 class="section-title">NUEVOS <span class="highlight">LANZAMIENTOS</span></h2>
+      <p class="section-subtitle">Las ultimas prendas de alto rendimiento para tu entrenamiento.</p>
+    </div>
+    <div class="products-grid reveal">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="fotos pagina web/1. chaqueta fenova 25018/255.JPG" alt="Chaqueta Fenova">
+          <span class="product-badge badge-new">Nuevo</span>
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="product-action-btn" aria-label="Vista rapida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Agregar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-vendor">Juanpi Sport</p>
+          <h3 class="product-name">Chaqueta Fenova</h3>
+          <div class="product-price">
+            <span class="current">$89.900</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch active" style="background:#F4C2C2"></span>
+            <span class="swatch" style="background:#2C3E50"></span>
+            <span class="swatch" style="background:#0A0A0A"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="fotos pagina web/3.enterizo aroa 25045/204.JPG" alt="Enterizo Aroa" onerror="this.closest('.product-card-img').style.background='var(--gray-100)'">
+          <span class="product-badge badge-hot">Hot</span>
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="product-action-btn" aria-label="Vista rapida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Agregar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-vendor">Juanpi Sport</p>
+          <h3 class="product-name">Enterizo Aroa</h3>
+          <div class="product-price">
+            <span class="current">$115.000</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch active" style="background:#8B6F5E"></span>
+            <span class="swatch" style="background:#808080"></span>
+            <span class="swatch" style="background:#001E4A"></span>
+            <span class="swatch" style="background:#0A0A0A"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="fotos pagina web/13.set aurora 25031/13.JPG" alt="Set Aurora" onerror="this.closest('.product-card-img').style.background='var(--gray-100)'">
+          <span class="product-badge badge-new">Nuevo</span>
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="product-action-btn" aria-label="Vista rapida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Agregar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-vendor">Juanpi Sport</p>
+          <h3 class="product-name">Set Aurora</h3>
+          <div class="product-price">
+            <span class="current">$135.000</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch active" style="background:#0A0A0A"></span>
+            <span class="swatch" style="background:#4A6B8A"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-card-img">
+          <img src="fotos pagina web/6.falda marea 25033/238.JPG" alt="Falda Marea" onerror="this.closest('.product-card-img').style.background='var(--gray-100)'">
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Favorito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+            <button class="product-action-btn" aria-label="Vista rapida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Agregar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-vendor">Juanpi Sport</p>
+          <h3 class="product-name">Falda Marea</h3>
+          <div class="product-price">
+            <span class="current">$72.000</span>
+          </div>
+          <div class="product-swatches">
+            <span class="swatch active" style="background:#0A0A0A"></span>
+            <span class="swatch" style="background:#8B3A4A"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SPLIT BANNER — SHOP WOMEN ═══════════ -->
+<section class="split-banner reveal" id="collections">
+  <div class="split-left">
+    <div class="split-left-content">
+      <p class="section-tag">Coleccion Mujer</p>
+      <h2 class="section-title">CONQUISTA<br>CON <span style="color:var(--yellow)">DISCIPLINA</span></h2>
+      <p class="section-subtitle">Descubre nuestra linea completa de activewear disenada para mujeres que entrenan con proposito.</p>
+      <a href="#" class="btn-primary">Ver Todo</a>
+    </div>
+  </div>
+  <div class="split-right">
+    <img src="fotos pagina web/fotos canva/nuevos (2).png" alt="Crop Top Juanpi Sport">
+  </div>
+</section>
+
+<!-- ═══════════ EDITORS PICKS ═══════════ -->
+<section class="section" id="picks">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">Seleccion Especial</p>
+      <h2 class="section-title">FAVORITOS DEL <span class="highlight">EDITOR</span></h2>
+    </div>
+    <div class="picks-grid reveal">
+      <div class="pick-card">
+        <img src="fotos pagina web/fotos canva/nuevo11.png" alt="Enterizo">
+        <div class="pick-overlay">
+          <h3>Enterizo Deportivo</h3>
+          <p>Tela nylon &bull; Copas &bull; Push up</p>
+          <span class="pick-price">Desde $115.000</span>
+        </div>
+      </div>
+      <div class="pick-card">
+        <img src="fotos pagina web/fotos canva/nuevos (3).png" alt="Vestido">
+        <div class="pick-overlay">
+          <h3>Vestido Deportivo</h3>
+          <p>Estilo y movimiento</p>
+          <span class="pick-price">Desde $85.000</span>
+        </div>
+      </div>
+      <div class="pick-card">
+        <img src="fotos pagina web/fotos canva/nuevo12 (9).png" alt="Conjunto Algodon">
+        <div class="pick-overlay">
+          <h3>Conjunto Algodon</h3>
+          <p>Comodidad total</p>
+          <span class="pick-price">Desde $125.000</span>
+        </div>
+      </div>
+      <div class="pick-card">
+        <img src="fotos pagina web/fotos canva/nuevo11 (1).png" alt="Conjunto Deportivo">
+        <div class="pick-overlay">
+          <h3>Conjunto Deportivo</h3>
+          <p>Crop top + Short &bull; Multiples colores</p>
+          <span class="pick-price">Desde $95.000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SALE / COUNTDOWN ═══════════ -->
+<section class="section sale-section" id="sale">
+  <div class="container">
+    <div class="sale-inner reveal">
+      <p class="section-tag">Oferta Especial</p>
+      <h2 class="section-title">REBAJAS DE <span style="color:var(--yellow)">TEMPORADA</span></h2>
+      <div class="sale-percent">70<span>% OFF</span></div>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item"><span class="num" id="days">00</span><span class="label">Dias</span></div>
+        <div class="countdown-item"><span class="num" id="hours">00</span><span class="label">Horas</span></div>
+        <div class="countdown-item"><span class="num" id="minutes">00</span><span class="label">Min</span></div>
+        <div class="countdown-item"><span class="num" id="seconds">00</span><span class="label">Seg</span></div>
+      </div>
+      <a href="#" class="btn-primary" style="display:inline-block;">Comprar Ahora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ IMAGE GALLERY / INSTAGRAM ═══════════ -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-tag">@juanpisport</p>
+      <h2 class="section-title">GALERIA DE <span class="highlight">ESTILO</span></h2>
+      <p class="section-subtitle">Siguenos en Instagram para mas inspiracion.</p>
+    </div>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item">
+      <img src="fotos pagina web/2.crop top lyra 25010/300.JPG" alt="Crop Top Lyra">
+      <div class="ig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></div>
+    </div>
+    <div class="gallery-item">
+      <img src="fotos pagina web/14.set corto seila 25024/150.JPG" alt="Set Corto Seila">
+      <div class="ig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></div>
+    </div>
+    <div class="gallery-item">
+      <img src="fotos pagina web/1. chaqueta fenova 25018/286.JPG" alt="Chaqueta Fenova">
+      <div class="ig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></div>
+    </div>
+    <div class="gallery-item">
+      <img src="fotos pagina web/9.falda zenova 25034/241.JPG" alt="Falda Zenova">
+      <div class="ig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BUY NOW PAY LATER ═══════════ -->
+<section class="section bnpl">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-title">COMPRA AHORA, <span class="highlight">PAGA DESPUES</span></h2>
+      <p class="section-subtitle">Opciones de pago flexibles para que entrenes sin preocupaciones.</p>
+    </div>
+    <div class="bnpl-icons reveal">
+      <div class="bnpl-item">
+        <div class="bnpl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <strong>Tarjetas</strong>
+        <p>Credito y debito sin recargo</p>
+      </div>
+      <div class="bnpl-item">
+        <div class="bnpl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <strong>Cuotas</strong>
+        <p>Hasta 12 cuotas sin interes</p>
+      </div>
+      <div class="bnpl-item">
+        <div class="bnpl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <strong>Envio Seguro</strong>
+        <p>Empaque protegido a todo el pais</p>
+      </div>
+      <div class="bnpl-item">
+        <div class="bnpl-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <strong>Soporte</strong>
+        <p>Atencion personalizada por WhatsApp</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ NEWSLETTER ═══════════ -->
+<section class="section newsletter">
+  <div class="container">
+    <div class="newsletter-inner reveal">
+      <p class="section-tag">Newsletter</p>
+      <h2 class="section-title">UNETE AL MOVIMIENTO</h2>
+      <p class="section-subtitle">Recibe ofertas exclusivas, lanzamientos y consejos de entrenamiento directo en tu correo.</p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='SUSCRITA!'; this.querySelector('input').value='';">
+        <input type="email" placeholder="Tu correo electronico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">Juanpi Sport</span>
+        <p>Ropa deportiva femenina disenada en Colombia. Calidad, estilo y rendimiento en cada prenda.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Tienda</h4>
+        <a href="#">Novedades</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Sets Deportivos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Todos los Productos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Guia de Tallas</a>
+        <a href="#">Envios y Entregas</a>
+        <a href="#">Devoluciones</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Blog</a>
+        <a href="#">Politica de Privacidad</a>
+        <a href="#">Terminos y Condiciones</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Juanpi Sport. Todos los derechos reservados.</p>
+      <div class="payment-icons">
+        <span>VISA</span>
+        <span>MASTERCARD</span>
+        <span>PSE</span>
+        <span>NEQUI</span>
+        <span>DAVIPLATA</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ JAVASCRIPT ═══════════ -->
+<script>
+// Sticky header shadow
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Mobile nav
+const menuToggle = document.getElementById('menuToggle');
+const mobileNav = document.getElementById('mobileNav');
+const mobileNavClose = document.getElementById('mobileNavClose');
+menuToggle.addEventListener('click', () => mobileNav.classList.add('open'));
+mobileNavClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+mobileNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => mobileNav.classList.remove('open'));
+});
+
+// Countdown timer — ends Dec 31, 2026
+function updateCountdown() {
+  const end = new Date('December 31, 2026 18:00:00').getTime();
+  const now = Date.now();
+  const diff = end - now;
+  if (diff <= 0) return;
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  document.getElementById('days').textContent = String(d).padStart(2, '0');
+  document.getElementById('hours').textContent = String(h).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

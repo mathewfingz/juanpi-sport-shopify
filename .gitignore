@@ -1,0 +1,8 @@
+# Photos — upload these directly to Shopify admin
+fotos pagina web/
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
