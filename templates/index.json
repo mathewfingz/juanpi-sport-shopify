@@ -1,282 +1,270 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "jp_css": {
-      "type": "jp-css",
-      "settings": {}
+    "jp_css_loader": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link href=\"https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap\" rel=\"stylesheet\">\n{{ 'juanpi-home.css' | asset_url | stylesheet_tag }}",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     },
     "jp_hero": {
-      "type": "jp-hero",
+      "type": "custom-liquid",
       "settings": {
-        "tag": "Nueva Coleccion 2026",
-        "heading_line1": "ENTRENA CON",
-        "heading_accent": "ACTITUD",
-        "subtitle": "Ropa deportiva femenina de alto rendimiento. Disenada para brindar soporte, comodidad y estilo en cada movimiento.",
-        "badge_text": "Tela Nylon Premium",
-        "btn1_label": "Ver Coleccion",
-        "btn1_link": "/collections/all",
-        "btn2_label": "Ofertas Especiales",
-        "btn2_link": "/collections"
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"hero\">\n  <div class=\"hero-bg\">\n    {{ 'hero-bg.png' | asset_url | image_tag: alt: 'Juanpi Sport Set Deportivo', class: '' }}\n  </div>\n  <div class=\"hero-overlay\"></div>\n  <div class=\"hero-grid-pattern\"></div>\n  <div class=\"hero-content\">\n    <div class=\"hero-text\">\n      <div class=\"hero-tag\">Nueva Coleccion 2026</div>\n      <h1 class=\"hero-title\">\n        ENTRENA CON\n        <span class=\"accent\">ACTITUD</span>\n      </h1>\n      <p class=\"hero-subtitle\">\n        Ropa deportiva femenina de alto rendimiento. Disenada para brindar soporte, comodidad y estilo en cada movimiento.\n      </p>\n      <div class=\"hero-cta\">\n        <a href=\"/collections/all\" class=\"btn-primary\">Ver Coleccion</a>\n        <a href=\"/collections\" class=\"btn-secondary\">Ofertas Especiales</a>\n      </div>\n    </div>\n    <div class=\"hero-images\">\n      {{ 'hero-img-main.png' | asset_url | image_tag: alt: 'Set deportivo', class: 'hero-img-main' }}\n      {{ 'hero-img-secondary.png' | asset_url | image_tag: alt: 'Conjunto deportivo', class: 'hero-img-secondary' }}\n      <div class=\"hero-float-badge\">Tela Nylon Premium</div>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_marquee": {
-      "type": "jp-marquee",
-      "blocks": {
-        "cat1": {
-          "type": "category",
-          "settings": {
-            "text": "Crop Tops"
-          }
-        },
-        "cat2": {
-          "type": "category",
-          "settings": {
-            "text": "Enterizos"
-          }
-        },
-        "cat3": {
-          "type": "category",
-          "settings": {
-            "text": "Sets Deportivos"
-          }
-        },
-        "cat4": {
-          "type": "category",
-          "settings": {
-            "text": "Faldas"
-          }
-        },
-        "cat5": {
-          "type": "category",
-          "settings": {
-            "text": "Licras"
-          }
-        },
-        "cat6": {
-          "type": "category",
-          "settings": {
-            "text": "Chaquetas"
-          }
-        },
-        "cat7": {
-          "type": "category",
-          "settings": {
-            "text": "Shorts"
-          }
-        },
-        "cat8": {
-          "type": "category",
-          "settings": {
-            "text": "Vestidos"
-          }
-        },
-        "cat9": {
-          "type": "category",
-          "settings": {
-            "text": "Joggers"
-          }
-        },
-        "cat10": {
-          "type": "category",
-          "settings": {
-            "text": "Pantalones"
-          }
-        }
-      },
-      "block_order": [
-        "cat1",
-        "cat2",
-        "cat3",
-        "cat4",
-        "cat5",
-        "cat6",
-        "cat7",
-        "cat8",
-        "cat9",
-        "cat10"
-      ],
-      "settings": {}
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"jp-home\">\n<div class=\"categories\">\n  <div class=\"categories-inner\">\n    <span class=\"cat-item\">Crop Tops</span>\n    <span class=\"cat-item\">Enterizos</span>\n    <span class=\"cat-item\">Sets Deportivos</span>\n    <span class=\"cat-item\">Faldas</span>\n    <span class=\"cat-item\">Licras</span>\n    <span class=\"cat-item\">Chaquetas</span>\n    <span class=\"cat-item\">Shorts</span>\n    <span class=\"cat-item\">Vestidos</span>\n    <span class=\"cat-item\">Joggers</span>\n    <span class=\"cat-item\">Pantalones</span>\n    <span class=\"cat-item\">Crop Tops</span>\n    <span class=\"cat-item\">Enterizos</span>\n    <span class=\"cat-item\">Sets Deportivos</span>\n    <span class=\"cat-item\">Faldas</span>\n    <span class=\"cat-item\">Licras</span>\n    <span class=\"cat-item\">Chaquetas</span>\n    <span class=\"cat-item\">Shorts</span>\n    <span class=\"cat-item\">Vestidos</span>\n    <span class=\"cat-item\">Joggers</span>\n    <span class=\"cat-item\">Pantalones</span>\n  </div>\n</div>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     },
     "jp_releases_header": {
-      "type": "jp-releases-header",
+      "type": "custom-liquid",
       "settings": {
-        "tag": "Lo Ultimo",
-        "heading": "NUEVOS <span class=\"highlight\">LANZAMIENTOS</span>",
-        "subtitle": "Las ultimas prendas de alto rendimiento para tu entrenamiento."
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section new-releases\" id=\"new-releases\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <p class=\"section-tag\">Lo Ultimo</p>\n      <h2 class=\"section-title\">NUEVOS <span class=\"highlight\">LANZAMIENTOS</span></h2>\n      <p class=\"section-subtitle\">Las ultimas prendas de alto rendimiento para tu entrenamiento.</p>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_releases": {
       "type": "featured-collection",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "content_direction_mobile": "column",
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "horizontal_alignment_mobile": "flex-start",
+            "vertical_alignment_mobile": "center",
+            "horizontal_alignment_flex_direction_column_mobile": "flex-start",
+            "vertical_alignment_flex_direction_column_mobile": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "inherit_color_scheme": true,
+            "scheme_background": "#ffffff",
+            "scheme_background_gradient": "",
+            "scheme_foreground_heading": "#000000",
+            "scheme_foreground": "#000000",
+            "scheme_primary": "#000f9f",
+            "scheme_primary_hover": "#000000",
+            "scheme_border": "#e6e6e6",
+            "scheme_shadow": "#000000",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 0,
+            "border_radius": 0,
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "padding-block-start": 0,
+            "padding-inline-end": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0
+          },
+          "blocks": {}
+        },
+        "product-slide-item": {
+          "type": "card-product-flex",
+          "static": true,
+          "settings": {
+            "product": "",
+            "inherit_color_scheme": true,
+            "scheme_background": "#ffffff",
+            "scheme_background_gradient": "",
+            "scheme_foreground_heading": "#000000",
+            "scheme_foreground": "#000000",
+            "scheme_primary": "#000f9f",
+            "scheme_primary_hover": "#000000",
+            "scheme_border": "#e6e6e6",
+            "scheme_shadow": "#000000",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "content_direction": "column",
+            "wrap": "no-wrap",
+            "align_items": "stretch",
+            "justify_content": "start",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "padding-block-start": 36,
+            "padding-block-end": 36,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
       "settings": {
-        "collection": "",
+        "collection": "frontpage",
         "layout_type": "grid",
+        "widget_layout": "default",
         "products_to_show": 4,
         "columns_desktop": 4,
+        "columns_desktop_widget": "1",
         "columns_gap": 16,
         "rows_gap": 16,
         "media_size": "medium",
-        "media_ratio": "portrait"
+        "link": "",
+        "animation_type": "none",
+        "source": "uploaded",
+        "video_url": "",
+        "video_display_mode": "inline",
+        "video_autoplay": false,
+        "video_loop": true,
+        "alt": "",
+        "position": "left",
+        "align_items": "stretch",
+        "media_ratio": "portrait",
+        "image_position": "cover",
+        "content_media_position": "center",
+        "content_media_alignment": "left",
+        "content_heading": "",
+        "heading_margin_bottom": 0,
+        "heading_type_preset": "rte",
+        "heading_font": "var(--font-body--family)",
+        "heading_font_size": "",
+        "heading_line_height": "normal",
+        "heading_letter_spacing": "normal",
+        "heading_case": "none",
+        "heading_wrap": "pretty",
+        "heading_color": "var(--color-foreground)",
+        "content_subheading": "",
+        "subheading_margin_bottom": 0,
+        "subheading_type_preset": "rte",
+        "subheading_font": "var(--font-body--family)",
+        "subheading_font_size": "",
+        "subheading_line_height": "normal",
+        "subheading_letter_spacing": "normal",
+        "subheading_case": "none",
+        "subheading_wrap": "pretty",
+        "subheading_color": "var(--color-foreground)",
+        "content_text": "",
+        "text_margin_bottom": 0,
+        "text_type_preset": "rte",
+        "text_font": "var(--font-body--family)",
+        "text_font_size": "",
+        "text_line_height": "normal",
+        "text_letter_spacing": "normal",
+        "text_case": "none",
+        "text_wrap": "pretty",
+        "text_color": "var(--color-foreground)",
+        "content_button_label": "",
+        "content_button_style": "button",
+        "content_button_link": "",
+        "show_more_product": false,
+        "show_more_product_text": "Show more",
+        "show_more_font_size": "",
+        "show_more_font_weight": "default",
+        "show_more_product_width": "fit-content",
+        "unit": "percent",
+        "custom_width": 100,
+        "custom_width_pixel": 100,
+        "show_more_product_width_mobile": "fit-content",
+        "custom_width_mobile": 100,
+        "custom_width_mobile_pixel": 100,
+        "show_more_product_top_offset": 40,
+        "loop": false,
+        "full_width": false,
+        "navigation": "arrows",
+        "arrows_position": "inside",
+        "pagination_type": "bullets",
+        "dots_top_offset": 40,
+        "progress_top_offset": 40,
+        "page_width": "page-width",
+        "page_width_custom": 1570,
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding-block-start": 36,
+        "padding-block-end": 36,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
       }
     },
     "jp_split": {
-      "type": "jp-split-banner",
+      "type": "custom-liquid",
       "settings": {
-        "tag": "Coleccion Mujer",
-        "heading": "CONQUISTA<br>CON <span style=\"color:#FFD600\">DISCIPLINA</span>",
-        "subtitle": "Descubre nuestra linea completa de activewear disenada para mujeres que entrenan con proposito.",
-        "btn_label": "Ver Todo",
-        "btn_link": "/collections/all"
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"split-banner\" id=\"collections\">\n  <div class=\"split-left\">\n    <div class=\"split-left-content\">\n      <p class=\"section-tag\">Coleccion Mujer</p>\n      <h2 class=\"section-title\">CONQUISTA<br>CON <span style=\"color:var(--yellow)\">DISCIPLINA</span></h2>\n      <p class=\"section-subtitle\">Descubre nuestra linea completa de activewear disenada para mujeres que entrenan con proposito.</p>\n      <a href=\"/collections/all\" class=\"btn-primary\">Ver Todo</a>\n    </div>\n  </div>\n  <div class=\"split-right\">\n    {{ 'split-banner.png' | asset_url | image_tag: alt: 'Crop Top Juanpi Sport' }}\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_picks": {
-      "type": "jp-picks",
-      "blocks": {
-        "pick1": {
-          "type": "pick",
-          "settings": {
-            "title": "Enterizo Deportivo",
-            "description": "Tela nylon • Copas • Push up",
-            "price": "Desde $115.000"
-          }
-        },
-        "pick2": {
-          "type": "pick",
-          "settings": {
-            "title": "Vestido Deportivo",
-            "description": "Estilo y movimiento",
-            "price": "Desde $85.000"
-          }
-        },
-        "pick3": {
-          "type": "pick",
-          "settings": {
-            "title": "Conjunto Algodon",
-            "description": "Comodidad total",
-            "price": "Desde $125.000"
-          }
-        },
-        "pick4": {
-          "type": "pick",
-          "settings": {
-            "title": "Conjunto Deportivo",
-            "description": "Crop top + Short • Multiples colores",
-            "price": "Desde $95.000"
-          }
-        }
-      },
-      "block_order": [
-        "pick1",
-        "pick2",
-        "pick3",
-        "pick4"
-      ],
+      "type": "custom-liquid",
       "settings": {
-        "tag": "Seleccion Especial",
-        "heading": "FAVORITOS DEL <span class=\"highlight\">EDITOR</span>"
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section\" id=\"picks\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <p class=\"section-tag\">Seleccion Especial</p>\n      <h2 class=\"section-title\">FAVORITOS DEL <span class=\"highlight\">EDITOR</span></h2>\n    </div>\n    <div class=\"picks-grid\">\n      <div class=\"pick-card\">\n        {{ 'pick-1.png' | asset_url | image_tag: alt: 'Enterizo' }}\n        <div class=\"pick-overlay\">\n          <h3>Enterizo Deportivo</h3>\n          <p>Tela nylon &bull; Copas &bull; Push up</p>\n          <span class=\"pick-price\">Desde $115.000</span>\n        </div>\n      </div>\n      <div class=\"pick-card\">\n        {{ 'pick-2.png' | asset_url | image_tag: alt: 'Vestido' }}\n        <div class=\"pick-overlay\">\n          <h3>Vestido Deportivo</h3>\n          <p>Estilo y movimiento</p>\n          <span class=\"pick-price\">Desde $85.000</span>\n        </div>\n      </div>\n      <div class=\"pick-card\">\n        {{ 'pick-3.png' | asset_url | image_tag: alt: 'Conjunto Algodon' }}\n        <div class=\"pick-overlay\">\n          <h3>Conjunto Algodon</h3>\n          <p>Comodidad total</p>\n          <span class=\"pick-price\">Desde $125.000</span>\n        </div>\n      </div>\n      <div class=\"pick-card\">\n        {{ 'pick-4.png' | asset_url | image_tag: alt: 'Conjunto Deportivo' }}\n        <div class=\"pick-overlay\">\n          <h3>Conjunto Deportivo</h3>\n          <p>Crop top + Short &bull; Multiples colores</p>\n          <span class=\"pick-price\">Desde $95.000</span>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_sale": {
-      "type": "jp-sale",
+      "type": "custom-liquid",
       "settings": {
-        "tag": "Oferta Especial",
-        "heading": "REBAJAS DE <span style=\"color:#FFD600\">TEMPORADA</span>",
-        "percent": "70",
-        "end_date": "December 31, 2026 18:00:00",
-        "btn_label": "Comprar Ahora",
-        "btn_link": "/collections"
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section sale-section\" id=\"sale\">\n  <div class=\"container\">\n    <div class=\"sale-inner\">\n      <p class=\"section-tag\">Oferta Especial</p>\n      <h2 class=\"section-title\">REBAJAS DE <span style=\"color:var(--yellow)\">TEMPORADA</span></h2>\n      <div class=\"sale-percent\">70<span>% OFF</span></div>\n      <div class=\"countdown\" id=\"countdown\">\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-days\">00</span><span class=\"label\">Dias</span></div>\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-hours\">00</span><span class=\"label\">Horas</span></div>\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-minutes\">00</span><span class=\"label\">Min</span></div>\n        <div class=\"countdown-item\"><span class=\"num\" id=\"jp-seconds\">00</span><span class=\"label\">Seg</span></div>\n      </div>\n      <a href=\"/collections\" class=\"btn-primary\" style=\"display:inline-block;\">Comprar Ahora</a>\n    </div>\n  </div>\n</section>\n<script>\n(function(){\n  function updateCountdown(){\n    var end=new Date('December 31, 2026 18:00:00').getTime();\n    var now=Date.now();\n    var diff=end-now;\n    if(diff<=0)return;\n    var d=Math.floor(diff/86400000);\n    var h=Math.floor((diff%86400000)/3600000);\n    var m=Math.floor((diff%3600000)/60000);\n    var s=Math.floor((diff%60000)/1000);\n    var de=document.getElementById('jp-days');if(de)de.textContent=String(d).padStart(2,'0');\n    var he=document.getElementById('jp-hours');if(he)he.textContent=String(h).padStart(2,'0');\n    var me=document.getElementById('jp-minutes');if(me)me.textContent=String(m).padStart(2,'0');\n    var se=document.getElementById('jp-seconds');if(se)se.textContent=String(s).padStart(2,'0');\n  }\n  updateCountdown();\n  setInterval(updateCountdown,1000);\n})();\n</script>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_gallery": {
-      "type": "jp-gallery",
-      "blocks": {
-        "gal1": {
-          "type": "gallery_image",
-          "settings": {}
-        },
-        "gal2": {
-          "type": "gallery_image",
-          "settings": {}
-        },
-        "gal3": {
-          "type": "gallery_image",
-          "settings": {}
-        },
-        "gal4": {
-          "type": "gallery_image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "gal1",
-        "gal2",
-        "gal3",
-        "gal4"
-      ],
+      "type": "custom-liquid",
       "settings": {
-        "tag": "@juanpisport",
-        "heading": "GALERIA DE <span class=\"highlight\">ESTILO</span>",
-        "subtitle": "Siguenos en Instagram para mas inspiracion."
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section gallery\" id=\"gallery\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <p class=\"section-tag\">@juanpisport</p>\n      <h2 class=\"section-title\">GALERIA DE <span class=\"highlight\">ESTILO</span></h2>\n      <p class=\"section-subtitle\">Siguenos en Instagram para mas inspiracion.</p>\n    </div>\n  </div>\n  <div class=\"gallery-grid\">\n    <div class=\"gallery-item\">\n      {{ 'gallery-1.jpg' | asset_url | image_tag: alt: 'Crop Top Lyra' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n    <div class=\"gallery-item\">\n      {{ 'gallery-2.jpg' | asset_url | image_tag: alt: 'Set Corto Seila' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n    <div class=\"gallery-item\">\n      {{ 'gallery-3.jpg' | asset_url | image_tag: alt: 'Chaqueta Fenova' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n    <div class=\"gallery-item\">\n      {{ 'gallery-4.jpg' | asset_url | image_tag: alt: 'Falda Zenova' }}\n      <div class=\"ig-icon\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><circle cx=\"17.5\" cy=\"6.5\" r=\"1.5\" fill=\"currentColor\"/></svg></div>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_bnpl": {
-      "type": "jp-bnpl",
-      "blocks": {
-        "b1": {
-          "type": "benefit",
-          "settings": {
-            "icon": "card",
-            "title": "Tarjetas",
-            "description": "Credito y debito sin recargo"
-          }
-        },
-        "b2": {
-          "type": "benefit",
-          "settings": {
-            "icon": "money",
-            "title": "Cuotas",
-            "description": "Hasta 12 cuotas sin interes"
-          }
-        },
-        "b3": {
-          "type": "benefit",
-          "settings": {
-            "icon": "package",
-            "title": "Envio Seguro",
-            "description": "Empaque protegido a todo el pais"
-          }
-        },
-        "b4": {
-          "type": "benefit",
-          "settings": {
-            "icon": "mail",
-            "title": "Soporte",
-            "description": "Atencion personalizada por WhatsApp"
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ],
+      "type": "custom-liquid",
       "settings": {
-        "heading": "COMPRA AHORA, <span class=\"highlight\">PAGA DESPUES</span>",
-        "subtitle": "Opciones de pago flexibles para que entrenes sin preocupaciones."
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section bnpl\">\n  <div class=\"container\">\n    <div class=\"section-header\">\n      <h2 class=\"section-title\">COMPRA AHORA, <span class=\"highlight\">PAGA DESPUES</span></h2>\n      <p class=\"section-subtitle\">Opciones de pago flexibles para que entrenes sin preocupaciones.</p>\n    </div>\n    <div class=\"bnpl-icons\">\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\"/><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"/></svg>\n        </div>\n        <strong>Tarjetas</strong>\n        <p>Credito y debito sin recargo</p>\n      </div>\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>\n        </div>\n        <strong>Cuotas</strong>\n        <p>Hasta 12 cuotas sin interes</p>\n      </div>\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>\n        </div>\n        <strong>Envio Seguro</strong>\n        <p>Empaque protegido a todo el pais</p>\n      </div>\n      <div class=\"bnpl-item\">\n        <div class=\"bnpl-icon\">\n          <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\"/><polyline points=\"22,6 12,13 2,6\"/></svg>\n        </div>\n        <strong>Soporte</strong>\n        <p>Atencion personalizada por WhatsApp</p>\n      </div>\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "jp_newsletter": {
-      "type": "jp-newsletter",
+      "type": "custom-liquid",
       "settings": {
-        "tag": "Newsletter",
-        "heading": "UNETE AL MOVIMIENTO",
-        "subtitle": "Recibe ofertas exclusivas, lanzamientos y consejos de entrenamiento directo en tu correo.",
-        "placeholder": "Tu correo electronico",
-        "btn_label": "Suscribirme"
+        "custom_liquid": "<div class=\"jp-home\">\n<section class=\"section newsletter\">\n  <div class=\"container\">\n    <div class=\"newsletter-inner\">\n      <p class=\"section-tag\">Newsletter</p>\n      <h2 class=\"section-title\">UNETE AL MOVIMIENTO</h2>\n      <p class=\"section-subtitle\">Recibe ofertas exclusivas, lanzamientos y consejos de entrenamiento directo en tu correo.</p>\n      {% form 'customer' %}\n        <div class=\"newsletter-form\">\n          <input type=\"hidden\" name=\"contact[tags]\" value=\"newsletter\">\n          <input type=\"email\" name=\"contact[email]\" placeholder=\"Tu correo electronico\" required>\n          <button type=\"submit\">Suscribirme</button>\n        </div>\n      {% endform %}\n    </div>\n  </div>\n</section>\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "jp_css",
+    "jp_css_loader",
     "jp_hero",
     "jp_marquee",
     "jp_releases_header",
