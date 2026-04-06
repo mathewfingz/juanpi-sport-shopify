@@ -4,6 +4,89 @@
       "type": "jp-css",
       "settings": {}
     },
+    "promo_marquee": {
+      "type": "marquee",
+      "blocks": {
+        "promo_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ENVIO GRATIS en compras +$150.000</p>",
+            "type_preset": "custom",
+            "font_size": "0.85rem",
+            "letter_spacing": "wide",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          }
+        },
+        "promo_div_1": {
+          "type": "_divider",
+          "settings": {}
+        },
+        "promo_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>10% OFF en tu primera compra con codigo: JUANPI10</p>",
+            "type_preset": "custom",
+            "font_size": "0.85rem",
+            "letter_spacing": "wide",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          }
+        },
+        "promo_div_2": {
+          "type": "_divider",
+          "settings": {}
+        },
+        "promo_3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nuevos lanzamientos cada semana</p>",
+            "type_preset": "custom",
+            "font_size": "0.85rem",
+            "letter_spacing": "wide",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          }
+        },
+        "promo_div_3": {
+          "type": "_divider",
+          "settings": {}
+        },
+        "promo_4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Suscribete y recibe ofertas exclusivas</p>",
+            "type_preset": "custom",
+            "font_size": "0.85rem",
+            "letter_spacing": "wide",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "width": "fit-content"
+          }
+        }
+      },
+      "block_order": [
+        "promo_1",
+        "promo_div_1",
+        "promo_2",
+        "promo_div_2",
+        "promo_3",
+        "promo_div_3",
+        "promo_4"
+      ],
+      "settings": {
+        "movement_direction": "normal",
+        "gap_between_elements": 60,
+        "color_scheme": "scheme-4",
+        "marquee_type": "auto",
+        "speed": 15,
+        "padding-block-start": 8,
+        "padding-block-end": 8
+      }
+    },
     "hero_slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -15,39 +98,28 @@
             "height": "full",
             "media_type_1": "image",
             "inherit_color_scheme": false,
-            "scheme_background": "#001E4A",
+            "scheme_background": "#0A0A0A",
             "scheme_foreground_heading": "#FFFFFF",
             "scheme_foreground": "#FFFFFF",
-            "scheme_primary": "#FFD600",
-            "scheme_primary_hover": "#FFCA28",
-            "scheme_border": "#001E4A",
+            "scheme_primary": "#FFFFFF",
+            "scheme_primary_hover": "#E0E0E0",
+            "scheme_border": "#0A0A0A",
             "scheme_shadow": "#000000"
           },
           "blocks": {
-            "hero_tag": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Nueva Coleccion 2026</p>",
-                "type_preset": "rte",
-                "width": "fit-content"
-              }
-            },
             "hero_heading": {
               "type": "text",
               "settings": {
-                "text": "<h1>ENTRENA CON ACTITUD</h1>",
+                "text": "<h1>ENTRENA. CONQUISTA. REPITE.</h1>",
                 "type_preset": "rte",
-                "highlight_text": true,
-                "highlight_text_content": "ACTITUD",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#FFD600",
+                "highlight_text": false,
                 "width": "fit-content"
               }
             },
             "hero_subtitle": {
               "type": "text",
               "settings": {
-                "text": "<p>Ropa deportiva femenina de alto rendimiento. Disenada para brindar soporte, comodidad y estilo en cada movimiento.</p>",
+                "text": "<p>Ropa deportiva de alto rendimiento disenada para mujeres que no se detienen.</p>",
                 "type_preset": "rte",
                 "width": "fit-content"
               }
@@ -55,8 +127,8 @@
             "hero_btn1": {
               "type": "button",
               "settings": {
-                "label": "Ver Coleccion",
-                "link": "shopify:\\/\\/collections\\/all",
+                "label": "Novedades",
+                "link": "shopify:\/\/collections\/all",
                 "style_class": "button",
                 "button_style": "default"
               }
@@ -64,35 +136,419 @@
             "hero_btn2": {
               "type": "button",
               "settings": {
-                "label": "Ofertas Especiales",
-                "link": "shopify:\\/\\/collections",
+                "label": "Ver Coleccion",
+                "link": "shopify:\/\/collections",
                 "style_class": "button-secondary",
                 "button_style": "outline"
               }
             }
           },
           "block_order": [
-            "hero_tag",
             "hero_heading",
             "hero_subtitle",
             "hero_btn1",
             "hero_btn2"
           ]
+        },
+        "slide_2": {
+          "type": "_slide",
+          "settings": {
+            "slide_background": true,
+            "container": "page-width page-width--full",
+            "height": "full",
+            "media_type_1": "image",
+            "inherit_color_scheme": false,
+            "scheme_background": "#1A1A2E",
+            "scheme_foreground_heading": "#FFFFFF",
+            "scheme_foreground": "#FFFFFF",
+            "scheme_primary": "#FFD600",
+            "scheme_primary_hover": "#FFCA28",
+            "scheme_border": "#1A1A2E",
+            "scheme_shadow": "#000000"
+          },
+          "blocks": {
+            "slide2_heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>NUEVA COLECCION 2026</h1>",
+                "type_preset": "rte",
+                "highlight_text": true,
+                "highlight_text_content": "2026",
+                "highlight_text_type": "text",
+                "highlight_text_color": "#FFD600",
+                "width": "fit-content"
+              }
+            },
+            "slide2_subtitle": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Soporte, comodidad y estilo en cada movimiento. Descubre lo nuevo.</p>",
+                "type_preset": "rte",
+                "width": "fit-content"
+              }
+            },
+            "slide2_btn": {
+              "type": "button",
+              "settings": {
+                "label": "Comprar Ahora",
+                "link": "shopify:\/\/collections\/all",
+                "style_class": "button",
+                "button_style": "default"
+              }
+            }
+          },
+          "block_order": [
+            "slide2_heading",
+            "slide2_subtitle",
+            "slide2_btn"
+          ]
         }
       },
       "block_order": [
-        "slide_1"
+        "slide_1",
+        "slide_2"
       ],
       "settings": {
         "slideshow_type": "default",
         "section_width": "full-width",
-        "slide_height": "large",
-        "slide_height_mb": "medium",
-        "autoplay": false,
-        "navigation": "none",
+        "slide_height": "full-screen",
+        "slide_height_mb": "large",
+        "autoplay": true,
+        "navigation": "pagination",
         "color_scheme": "scheme-1",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "new_in_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "layout_type": "carousel",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_gap": 16,
+        "rows_gap": 16,
+        "media_size": "medium",
+        "media_ratio": "portrait",
+        "navigation": "arrows",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "campaign_banner": {
+      "type": "media-banner",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "settings": {
+            "media_type": "image"
+          }
+        },
+        "content": {
+          "type": "_content-without-appearance",
+          "settings": {
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "fit-content",
+            "custom_width": 80,
+            "width_mobile": "100%",
+            "custom_width_mobile": 100,
+            "inherit_color_scheme": false,
+            "scheme_background": "rgba(0,0,0,0.6)",
+            "scheme_foreground_heading": "#FFFFFF",
+            "scheme_foreground": "rgba(255,255,255,0.9)",
+            "scheme_primary": "#FFFFFF",
+            "scheme_primary_hover": "#E0E0E0",
+            "padding-block-start": 60,
+            "padding-block-end": 60,
+            "padding-inline-start": 48,
+            "padding-inline-end": 48
+          },
+          "blocks": {
+            "camp_tag": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Coleccion Destacada</p>",
+                "type_preset": "rte"
+              }
+            },
+            "camp_heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>SETS DEPORTIVOS</h2>",
+                "type_preset": "rte",
+                "highlight_text": false
+              }
+            },
+            "camp_text": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Combina estilo y funcionalidad. Conjuntos perfectos para entrenar o para el dia a dia.</p>",
+                "type_preset": "rte"
+              }
+            },
+            "camp_btn_women": {
+              "type": "button",
+              "settings": {
+                "label": "Comprar Sets",
+                "link": "shopify:\/\/collections\/all",
+                "style_class": "button",
+                "button_style": "default"
+              }
+            }
+          },
+          "block_order": [
+            "camp_tag",
+            "camp_heading",
+            "camp_text",
+            "camp_btn_women"
+          ]
+        }
+      },
+      "block_order": [
+        "media",
+        "content"
+      ],
+      "settings": {
+        "section_width": "full-width",
+        "media_position": "left",
+        "desktop_content_position": "middle-center",
+        "media_width": "large",
+        "media_height": "80svh",
+        "color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "best_sellers": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "",
+        "layout_type": "carousel",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "columns_gap": 16,
+        "rows_gap": 16,
+        "media_size": "medium",
+        "media_ratio": "portrait",
+        "navigation": "arrows",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "popular_categories": {
+      "type": "media-with-text",
+      "blocks": {
+        "popular_header": {
+          "type": "_product-list-content",
+          "settings": {},
+          "blocks": {
+            "popular_title": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>POPULAR AHORA</h2>",
+                "type_preset": "rte"
+              }
+            }
+          },
+          "block_order": [
+            "popular_title"
+          ]
+        },
+        "cat_1": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "cat1_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "cat1_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Licras</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "cat1_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Comprar",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button-secondary",
+                    "button_style": "outline"
+                  }
+                }
+              },
+              "block_order": ["cat1_text", "cat1_btn"]
+            }
+          },
+          "block_order": ["cat1_group"]
+        },
+        "cat_2": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "cat2_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "cat2_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Tops Deportivos</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "cat2_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Comprar",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button-secondary",
+                    "button_style": "outline"
+                  }
+                }
+              },
+              "block_order": ["cat2_text", "cat2_btn"]
+            }
+          },
+          "block_order": ["cat2_group"]
+        },
+        "cat_3": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "cat3_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "cat3_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Shorts</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "cat3_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Comprar",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button-secondary",
+                    "button_style": "outline"
+                  }
+                }
+              },
+              "block_order": ["cat3_text", "cat3_btn"]
+            }
+          },
+          "block_order": ["cat3_group"]
+        },
+        "cat_4": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "cat4_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "cat4_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Bestsellers</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "cat4_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Comprar",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button-secondary",
+                    "button_style": "outline"
+                  }
+                }
+              },
+              "block_order": ["cat4_text", "cat4_btn"]
+            }
+          },
+          "block_order": ["cat4_group"]
+        }
+      },
+      "block_order": [
+        "popular_header",
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "section_width": "page-width",
+        "section_height": "medium",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "shop_by_activity": {
+      "type": "multitab-image",
+      "blocks": {
+        "tab_running": {
+          "type": "multitab-image-row",
+          "settings": {
+            "title_header": "Running"
+          }
+        },
+        "tab_gym": {
+          "type": "multitab-image-row",
+          "settings": {
+            "title_header": "Gym"
+          }
+        },
+        "tab_yoga": {
+          "type": "multitab-image-row",
+          "settings": {
+            "title_header": "Yoga"
+          }
+        },
+        "tab_crossfit": {
+          "type": "multitab-image-row",
+          "settings": {
+            "title_header": "CrossFit"
+          }
+        }
+      },
+      "block_order": [
+        "tab_running",
+        "tab_gym",
+        "tab_yoga",
+        "tab_crossfit"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "columns_desktop": 4,
+        "columns_mobile": 2,
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     },
     "categories_marquee": {
@@ -185,31 +641,7 @@
         "cat_8": {
           "type": "text",
           "settings": {
-            "text": "<p>Vestidos</p>",
-            "type_preset": "custom",
-            "font_size": "2rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "cat_9": {
-          "type": "text",
-          "settings": {
             "text": "<p>Joggers</p>",
-            "type_preset": "custom",
-            "font_size": "2rem",
-            "letter_spacing": "tight",
-            "case": "uppercase",
-            "wrap": "nowrap",
-            "width": "fit-content"
-          }
-        },
-        "cat_10": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pantalones</p>",
             "type_preset": "custom",
             "font_size": "2rem",
             "letter_spacing": "tight",
@@ -227,9 +659,7 @@
         "cat_5",
         "cat_6",
         "cat_7",
-        "cat_8",
-        "cat_9",
-        "cat_10"
+        "cat_8"
       ],
       "settings": {
         "movement_direction": "normal",
@@ -241,216 +671,152 @@
         "padding-block-end": 16
       }
     },
-    "new_releases": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "",
-        "layout_type": "grid",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "columns_gap": 16,
-        "rows_gap": 16,
-        "media_size": "medium",
-        "media_ratio": "portrait",
-        "color_scheme": "scheme-1"
-      }
-    },
-    "split_banner": {
-      "type": "media-banner",
+    "shop_by_category": {
+      "type": "media-with-text",
       "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "settings": {
-            "media_type": "image"
-          }
-        },
-        "content": {
-          "type": "_content-without-appearance",
-          "settings": {
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 20,
-            "width": "fit-content",
-            "custom_width": 80,
-            "width_mobile": "100%",
-            "custom_width_mobile": 100,
-            "inherit_color_scheme": false,
-            "scheme_background": "#001E4A",
-            "scheme_foreground_heading": "#FFFFFF",
-            "scheme_foreground": "rgba(255,255,255,0.7)",
-            "scheme_primary": "#FFD600",
-            "scheme_primary_hover": "#FFCA28",
-            "padding-block-start": 48,
-            "padding-block-end": 48,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
-          },
+        "shopcat_header": {
+          "type": "_product-list-content",
+          "settings": {},
           "blocks": {
-            "split_tag": {
+            "shopcat_title": {
               "type": "text",
               "settings": {
-                "text": "<p>Coleccion Mujer</p>",
+                "text": "<h2>COMPRA POR CATEGORIA</h2>",
                 "type_preset": "rte"
-              }
-            },
-            "split_heading": {
-              "type": "text",
-              "settings": {
-                "text": "<h2>CONQUISTA CON DISCIPLINA</h2>",
-                "type_preset": "rte",
-                "highlight_text": true,
-                "highlight_text_content": "DISCIPLINA",
-                "highlight_text_type": "text",
-                "highlight_text_color": "#FFD600"
-              }
-            },
-            "split_text": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Descubre nuestra linea completa de activewear disenada para mujeres que entrenan con proposito.</p>",
-                "type_preset": "rte"
-              }
-            },
-            "split_btn": {
-              "type": "button",
-              "settings": {
-                "label": "Ver Todo",
-                "link": "shopify:\\/\\/collections\\/all",
-                "style_class": "button",
-                "button_style": "default"
               }
             }
           },
           "block_order": [
-            "split_tag",
-            "split_heading",
-            "split_text",
-            "split_btn"
+            "shopcat_title"
           ]
+        },
+        "shopcat_1": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "shopcat1_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "shopcat1_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Parte Superior</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "shopcat1_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Ver Todo",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button",
+                    "button_style": "default"
+                  }
+                }
+              },
+              "block_order": ["shopcat1_text", "shopcat1_btn"]
+            }
+          },
+          "block_order": ["shopcat1_group"]
+        },
+        "shopcat_2": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "shopcat2_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "shopcat2_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Parte Inferior</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "shopcat2_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Ver Todo",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button",
+                    "button_style": "default"
+                  }
+                }
+              },
+              "block_order": ["shopcat2_text", "shopcat2_btn"]
+            }
+          },
+          "block_order": ["shopcat2_group"]
+        },
+        "shopcat_3": {
+          "type": "_media-w-text",
+          "settings": {
+            "background_media": "image",
+            "background_image_position": "cover"
+          },
+          "blocks": {
+            "shopcat3_group": {
+              "type": "group",
+              "settings": {},
+              "blocks": {
+                "shopcat3_text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Accesorios</h3>",
+                    "type_preset": "rte"
+                  }
+                },
+                "shopcat3_btn": {
+                  "type": "button",
+                  "settings": {
+                    "label": "Ver Todo",
+                    "link": "shopify:\/\/collections\/all",
+                    "style_class": "button",
+                    "button_style": "default"
+                  }
+                }
+              },
+              "block_order": ["shopcat3_text", "shopcat3_btn"]
+            }
+          },
+          "block_order": ["shopcat3_group"]
         }
       },
       "block_order": [
-        "media",
-        "content"
-      ],
-      "settings": {
-        "section_width": "full-width",
-        "media_position": "right",
-        "desktop_content_position": "middle-left",
-        "media_width": "large",
-        "media_height": "70svh",
-        "color_scheme": "",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "editors_picks": {
-      "type": "media-gallery",
-      "blocks": {
-        "pick_1": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "portrait"
-          }
-        },
-        "pick_2": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "portrait"
-          }
-        },
-        "pick_3": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "portrait"
-          }
-        },
-        "pick_4": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "portrait"
-          }
-        }
-      },
-      "block_order": [
-        "pick_1",
-        "pick_2",
-        "pick_3",
-        "pick_4"
-      ],
-      "settings": {
-        "content_direction": "row",
-        "content_direction_mobile": "column",
-        "horizontal_alignment": "flex-start",
-        "color_scheme": "scheme-1"
-      }
-    },
-    "jp_sale": {
-      "type": "jp-sale",
-      "settings": {
-        "tag": "Oferta Especial",
-        "heading": "REBAJAS DE <span style=\"color:#FFD600\">TEMPORADA</span>",
-        "percent": "70",
-        "end_date": "December 31, 2026 18:00:00",
-        "btn_label": "Comprar Ahora",
-        "btn_link": "/collections"
-      }
-    },
-    "instagram_gallery": {
-      "type": "media-gallery",
-      "blocks": {
-        "gal_1": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "square"
-          }
-        },
-        "gal_2": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "square"
-          }
-        },
-        "gal_3": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "square"
-          }
-        },
-        "gal_4": {
-          "type": "_instagram-item",
-          "settings": {
-            "background_media": "image",
-            "background_image_position": "cover",
-            "image_ratio": "square"
-          }
-        }
-      },
-      "block_order": [
-        "gal_1",
-        "gal_2",
-        "gal_3",
-        "gal_4"
+        "shopcat_header",
+        "shopcat_1",
+        "shopcat_2",
+        "shopcat_3"
       ],
       "settings": {
         "content_direction": "row",
-        "content_direction_mobile": "row",
-        "horizontal_alignment": "flex-start",
-        "color_scheme": "scheme-1"
+        "section_width": "page-width",
+        "section_height": "large",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
+    "blog_carousel": {
+      "type": "blog-posts",
+      "settings": {
+        "layout_type": "carousel",
+        "blog": "",
+        "articles_to_show": 6,
+        "columns_carousel": 3,
+        "carousel_on_mobile": true,
+        "navigation": "arrows",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 48,
+        "padding-block-end": 48
       }
     },
     "jp_bnpl": {
@@ -459,33 +825,33 @@
         "b1": {
           "type": "benefit",
           "settings": {
-            "icon": "card",
-            "title": "Tarjetas",
-            "description": "Credito y debito sin recargo"
+            "icon": "package",
+            "title": "Envio Gratis",
+            "description": "En compras superiores a $150.000"
           }
         },
         "b2": {
           "type": "benefit",
           "settings": {
-            "icon": "money",
-            "title": "Cuotas",
-            "description": "Hasta 12 cuotas sin interes"
+            "icon": "card",
+            "title": "Pago Seguro",
+            "description": "Todas las tarjetas sin recargo"
           }
         },
         "b3": {
           "type": "benefit",
           "settings": {
-            "icon": "package",
-            "title": "Envio Seguro",
-            "description": "Empaque protegido a todo el pais"
+            "icon": "money",
+            "title": "Cuotas Sin Interes",
+            "description": "Hasta 12 cuotas con tu tarjeta"
           }
         },
         "b4": {
           "type": "benefit",
           "settings": {
             "icon": "mail",
-            "title": "Soporte",
-            "description": "Atencion personalizada por WhatsApp"
+            "title": "Atencion 24/7",
+            "description": "Soporte por WhatsApp e Instagram"
           }
         }
       },
@@ -496,16 +862,16 @@
         "b4"
       ],
       "settings": {
-        "heading": "COMPRA AHORA, <span class=\"highlight\">PAGA DESPUES</span>",
-        "subtitle": "Opciones de pago flexibles para que entrenes sin preocupaciones."
+        "heading": "COMPRA CON <span class=\"highlight\">CONFIANZA</span>",
+        "subtitle": "Tu satisfaccion es nuestra prioridad."
       }
     },
     "jp_newsletter": {
       "type": "jp-newsletter",
       "settings": {
         "tag": "Newsletter",
-        "heading": "UNETE AL MOVIMIENTO",
-        "subtitle": "Recibe ofertas exclusivas, lanzamientos y consejos de entrenamiento directo en tu correo.",
+        "heading": "UNETE AL TEAM JUANPI",
+        "subtitle": "Se la primera en conocer nuevos lanzamientos, ofertas exclusivas y tips de entrenamiento.",
         "placeholder": "Tu correo electronico",
         "btn_label": "Suscribirme"
       }
@@ -513,13 +879,16 @@
   },
   "order": [
     "jp_css",
+    "promo_marquee",
     "hero_slideshow",
+    "new_in_collection",
+    "campaign_banner",
+    "best_sellers",
+    "popular_categories",
+    "shop_by_activity",
     "categories_marquee",
-    "new_releases",
-    "split_banner",
-    "editors_picks",
-    "jp_sale",
-    "instagram_gallery",
+    "shop_by_category",
+    "blog_carousel",
     "jp_bnpl",
     "jp_newsletter"
   ]
